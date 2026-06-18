@@ -1,0 +1,345 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "AI enterprise per la media impresa italiana" } = Astro.props;
+const pathname = Astro.url.pathname;
+const isAbout = pathname === '/about' || pathname === '/about/';
+---
+
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>{title} — SimplicitasAI</title>
+  </head>
+  <body>
+
+    <!-- ── NAV ─────────────────────────────────────────────────── -->
+    <nav>
+      <div class="nav-inner">
+        <a href="/" class="nav-logo" aria-label="SimplicitasAI">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 60" fill="none" style="height:26px;width:auto;">
+            <rect x="0" y="8" width="4" height="44" rx="2" fill="#4876f0"/>
+            <rect x="0" y="8" width="20" height="4" rx="2" fill="#4876f0"/>
+            <rect x="0" y="48" width="20" height="4" rx="2" fill="#4876f0"/>
+            <rect x="36" y="8" width="4" height="44" rx="2" fill="#d060e8"/>
+            <rect x="20" y="8" width="20" height="4" rx="2" fill="#d060e8"/>
+            <rect x="20" y="48" width="20" height="4" rx="2" fill="#d060e8"/>
+            <text x="56" y="40" font-family="'Manrope', system-ui, sans-serif" font-weight="700" font-size="28" letter-spacing="-0.5" fill="#f2f5f9">SimplicitasAI</text>
+          </svg>
+        </a>
+        <div class="nav-links">
+          <a href="/#approccio" class="nav-link">Approccio</a>
+          <a href="/#klaya" class="nav-link">Klaya</a>
+          <a href="/about" class:list={["nav-link", { "nav-link--active": isAbout }]}>Chi siamo</a>
+          <a href="/#contatti" class="nav-btn">Contattaci</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ── PAGE CONTENT ─────────────────────────────────────────── -->
+    <main>
+      <slot />
+    </main>
+
+    <!-- ── FOOTER ───────────────────────────────────────────────── -->
+    <footer>
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="/" aria-label="SimplicitasAI">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 60" fill="none" style="height:24px;width:auto;">
+              <rect x="0" y="8" width="4" height="44" rx="2" fill="#4876f0"/>
+              <rect x="0" y="8" width="20" height="4" rx="2" fill="#4876f0"/>
+              <rect x="0" y="48" width="20" height="4" rx="2" fill="#4876f0"/>
+              <rect x="36" y="8" width="4" height="44" rx="2" fill="#d060e8"/>
+              <rect x="20" y="8" width="20" height="4" rx="2" fill="#d060e8"/>
+              <rect x="20" y="48" width="20" height="4" rx="2" fill="#d060e8"/>
+              <text x="56" y="40" font-family="'Manrope', system-ui, sans-serif" font-weight="700" font-size="28" letter-spacing="-0.5" fill="#f2f5f9">SimplicitasAI</text>
+            </svg>
+          </a>
+          <p>AI enterprise per la media impresa italiana.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <span class="footer-col-label">Prodotto</span>
+            <a href="/#klaya">Klaya</a>
+            <a href="/#approccio">Come lavoriamo</a>
+          </div>
+          <div class="footer-col">
+            <span class="footer-col-label">Azienda</span>
+            <a href="/about" class:list={[{ "footer-link--active": isAbout }]}>Chi siamo</a>
+            <a href="/#contatti">Contatti</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 SimplicitasAI. Tutti i diritti riservati.</span>
+        <span class="badge-cold">Conforme AI Act · GDPR</span>
+      </div>
+    </footer>
+
+  </body>
+</html>
+
+<style is:global>
+  /* ── Design Tokens ─────────────────────────────────────────── */
+  :root {
+    --blue-950: #020818;
+    --blue-900: #060f2a;
+    --blue-800: #0c1c50;
+    --blue-700: #1632a0;
+    --blue-600: #1e40c0;
+    --blue-500: #2a56d8;
+    --blue-400: #4876f0;
+    --blue-300: #6898f4;
+    --blue-200: #98bcff;
+    --blue-100: #c4d8ff;
+    --blue-50:  #eaf1ff;
+
+    --fuchsia-950: #0f0418;
+    --fuchsia-900: #1c0830;
+    --fuchsia-800: #36104e;
+    --fuchsia-700: #5e1a82;
+    --fuchsia-600: #8c22b8;
+    --fuchsia-500: #b030d0;
+    --fuchsia-400: #d060e8;
+    --fuchsia-300: #e490f8;
+    --fuchsia-200: #f0bafc;
+    --fuchsia-100: #f8dcfe;
+    --fuchsia-50:  #fdf3ff;
+
+    --gray-950: #0f1117;
+    --gray-900: #161b24;
+    --gray-800: #1f2635;
+    --gray-700: #2e3547;
+    --gray-600: #404858;
+    --gray-500: #5a6272;
+    --gray-400: #7a8494;
+    --gray-300: #9da8b6;
+    --gray-200: #c4ccda;
+    --gray-100: #dfe4ed;
+    --gray-50:  #f2f5f9;
+    --gray-0:   #ffffff;
+
+    --green-700: #0d5c35;
+    --green-500: #1a8c52;
+    --green-100: #c0ecd6;
+
+    --surface-base:    var(--gray-950);
+    --surface-raised:  var(--gray-900);
+    --surface-overlay: var(--gray-800);
+
+    --border-subtle:  var(--gray-700);
+    --border-default: var(--gray-600);
+    --border-focus:   var(--fuchsia-500);
+
+    --text-primary:   var(--gray-50);
+    --text-secondary: var(--gray-300);
+    --text-tertiary:  var(--gray-500);
+
+    --font-display: 'Manrope', system-ui, sans-serif;
+    --font-body:    'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
+    --font-mono:    'IBM Plex Mono', 'Fira Code', monospace;
+
+    --radius-sm:   4px;
+    --radius-md:   8px;
+    --radius-lg:   12px;
+    --radius-xl:   16px;
+    --radius-pill: 9999px;
+
+    --shadow-focus: 0 0 0 3px rgba(176,48,208,0.45);
+  }
+
+  /* ── Reset ─────────────────────────────────────────────────── */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background: var(--gray-950);
+    color: var(--text-primary);
+    min-height: 100vh;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--border-focus);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+  }
+
+  ::selection { background: rgba(42,172,152,0.25); color: var(--text-primary); }
+
+  img, svg { display: block; max-width: 100%; }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  /* ── Nav ───────────────────────────────────────────────────── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(15,17,23,0.97);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .nav-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 40px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+  }
+
+  .nav-logo { display: flex; align-items: center; text-decoration: none; flex-shrink: 0; }
+
+  .nav-links { display: flex; align-items: center; gap: 32px; }
+
+  .nav-link {
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 150ms;
+    white-space: nowrap;
+  }
+  .nav-link:hover { color: var(--text-primary); }
+  .nav-link--active { color: var(--text-primary); }
+
+  .nav-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 16px;
+    height: 32px;
+    border-radius: var(--radius-md);
+    background: var(--fuchsia-500);
+    color: var(--gray-0);
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background 150ms;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .nav-btn:hover { background: var(--fuchsia-400); }
+
+  /* ── Footer ────────────────────────────────────────────────── */
+  footer {
+    background: var(--blue-950);
+    border-top: 1px solid var(--border-subtle);
+    padding: 60px 0 0;
+  }
+
+  .footer-top {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 40px 48px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 48px;
+    flex-wrap: wrap;
+  }
+
+  .footer-brand { display: flex; flex-direction: column; gap: 14px; }
+  .footer-brand a { display: flex; align-items: center; text-decoration: none; }
+  .footer-brand p {
+    font-family: var(--font-body);
+    font-size: 0.8125rem;
+    color: var(--text-tertiary);
+    max-width: 220px;
+    line-height: 1.55;
+  }
+
+  .footer-links { display: flex; gap: 64px; flex-wrap: wrap; }
+
+  .footer-col { display: flex; flex-direction: column; gap: 12px; }
+
+  .footer-col-label {
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-tertiary);
+  }
+
+  .footer-col a {
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 150ms;
+  }
+  .footer-col a:hover { color: var(--text-primary); }
+  .footer-col a.footer-link--active { color: var(--text-primary); }
+
+  .footer-bottom {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 24px 40px;
+    border-top: 1px solid var(--border-subtle);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .footer-bottom > span:first-child {
+    font-family: var(--font-body);
+    font-size: 0.8125rem;
+    color: var(--text-tertiary);
+  }
+
+  .badge-cold {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 3px 10px;
+    border-radius: var(--radius-pill);
+    background: rgba(46,82,142,0.25);
+    border: 1px solid rgba(64,112,176,0.3);
+    font-family: var(--font-body);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--blue-300);
+    white-space: nowrap;
+  }
+
+  /* ── Mobile ────────────────────────────────────────────────── */
+  @media (max-width: 768px) {
+    .nav-inner { padding: 0 20px; }
+    .nav-links { gap: 16px; }
+    .nav-link:not(:last-of-type) { display: none; }
+    .footer-top { padding: 0 20px 40px; }
+    .footer-bottom { padding: 20px; }
+    .footer-links { gap: 32px; }
+  }
+</style>
