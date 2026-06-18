@@ -1,489 +1,212 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Icon from '../components/Icon.astro';
 ---
 
 <Layout
   title="Chi siamo"
-  description="La storia di SimplicitasAI e la nostra missione per la media impresa italiana."
+  description="Costruita per essere verificata, non solo creduta. Klaya risponde dalle documentazioni aziendali e cita sempre la fonte — ogni volta."
 >
 
   <!-- ══ HERO ══════════════════════════════════════════════════ -->
   <section class="hero">
-    <div class="w">
-
-      <div class="eyebrow">
-        <span class="eyebrow-dot"></span>
-        La nostra storia
-      </div>
-
-      <h1>Perché esistiamo</h1>
-
-      <blockquote>
-        La complessità è il prezzo che le aziende pagano per l'AI.<br/>
-        Noi pensiamo che non dovrebbero.
-      </blockquote>
-
-    </div>
+    <span class="klaya-overline">Chi siamo</span>
+    <h1 class="hero-title">Costruita per essere verificata, non solo creduta.</h1>
+    <p class="hero-lead">
+      Klaya risponde dalle documentazioni aziendali e collega ogni affermazione al passaggio esatto da cui è tratta — costruita per i team che non possono permettersi una risposta non verificabile.
+    </p>
   </section>
 
-  <!-- ══ STORIA ════════════════════════════════════════════════ -->
+  <!-- ══ PERCHÉ ESISTIAMO ══════════════════════════════════════ -->
   <section class="section">
-    <div class="w story-grid">
-
-      <div class="story-text">
+    <div class="row">
+      <div class="row-text">
+        <h2 class="klaya-h1">Perché esistiamo</h2>
         <p>
-          Veniamo da due mondi che raramente si parlano. Da una parte l'AI e il machine learning,
-          con la loro promessa di trasformare ogni settore. Dall'altra il mondo enterprise
-          tradizionale — i sistemi che fanno davvero funzionare le aziende, fatti di dati,
-          processi, vincoli, responsabilità.
+          Legale, compliance, finanza, operazioni: i team che gestiscono i processi critici vivono dentro documenti densi e ad alto rischio — contratti, policy, capitolati, normative. Un'intelligenza artificiale generica che risponde in modo fluente ma non sa indicare da dove viene l'informazione è una responsabilità in quel contesto, non una scorciatoia.
         </p>
         <p>
-          Lavorando come ingegneri tra questi due mondi, abbiamo visto lo stesso problema ripetersi,
-          azienda dopo azienda. L'AI generativa era ovunque nelle conversazioni, e quasi da nessuna
-          parte nella realtà operativa delle medie imprese.
-        </p>
-        <p>
-          Non per mancanza di interesse — anzi. Ma perché tra il "potremmo usare l'AI" e il
-          "la usiamo davvero, in sicurezza" c'era una voragine di complessità: integrazioni,
-          rischi sui dati, allucinazioni dei modelli, conformità normativa. Una voragine che
-          solo le multinazionali, con i loro reparti dedicati, potevano permettersi di attraversare.
-        </p>
-        <p class="pull-quote">
-          Le medie imprese restavano ferme sul bordo. Non perché non capissero il valore —
-          ma perché nessuno toglieva loro la complessità di mezzo.
+          La conoscenza aziendale esiste, ma è irraggiungibile nel momento in cui serve: nei fascicoli chiusi, nei thread di email, nelle versioni sbagliate di un documento. Klaya è costruita per il caso opposto: ogni risposta è generata solo dai vostri documenti, e ogni affermazione porta una citazione al passaggio su cui si basa. Se non è nei vostri archivi, Klaya non lo dice.
         </p>
       </div>
-
-      <div class="story-aside">
-
+      <div class="row-aside">
         <div class="aside-card">
-          <div class="aside-label">Nata da</div>
-          <div class="aside-value">Due mondi</div>
-          <div class="aside-desc">AI engineering × Enterprise systems</div>
+          <div class="aside-label">Costruita per</div>
+          <div class="aside-value">Legal, compliance, finance, operations</div>
         </div>
-
         <div class="aside-card">
-          <div class="aside-label">Per chi</div>
-          <div class="aside-value">Media impresa</div>
-          <div class="aside-desc">Il tessuto produttivo italiano</div>
+          <div class="aside-label">Risponde da</div>
+          <div class="aside-value">I vostri documenti — nient'altro</div>
         </div>
-
-        <div class="aside-card aside-card--warm">
-          <div class="aside-label aside-label--warm">Il nostro impegno</div>
-          <div class="aside-value aside-value--warm">Semplicità</div>
-          <div class="aside-desc">Ci teniamo noi la complessità</div>
+        <div class="aside-card aside-card--brand">
+          <div class="aside-label aside-label--brand">La promessa</div>
+          <div class="aside-value aside-value--brand">Conoscenza verificabile, ogni volta.</div>
         </div>
-
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ══ IL NOME ════════════════════════════════════════════════ -->
-  <section class="section section-raised">
-    <div class="w">
-      <div style="max-width: 640px;">
-
-        <div class="section-label">Il nome è la promessa</div>
-        <h2 class="nome-title">Simplicitas.</h2>
-
-        <p>
-          Non l'abbiamo scelto perché suona elegante, ma perché descrive esattamente il nostro mestiere.
-        </p>
-        <p>
-          L'AI enterprise <em>è</em> complessa — e lo sarà sempre. La differenza è chi se la tiene.
-          La nostra convinzione è che la complessità debba restare dalla nostra parte: l'architettura
-          sicura, i flussi di dati, la conformità, le garanzie.
-        </p>
-        <p>
-          Dalla parte dell'azienda deve arrivare solo il risultato. Una risposta affidabile.
-          Una decisione più rapida. Un vantaggio competitivo.
-        </p>
-
-        <div class="raised-card">
-          <p>
-            Semplicità non vuol dire fare meno.<br/>
-            Vuol dire portare il peso al posto del cliente.
-          </p>
-        </div>
-
       </div>
     </div>
   </section>
 
-  <!-- ══ COME LAVORIAMO ════════════════════════════════════════ -->
-  <section class="section">
-    <div class="w">
+  <!-- ══ COME PENSIAMO ALLA FIDUCIA ════════════════════════════ -->
+  <section class="trust">
+    <div class="trust-inner">
+      <span class="trust-overline">Come pensiamo alla fiducia</span>
+      <h2 class="klaya-h1 trust-title">La fiducia si costruisce verificando, non credendo.</h2>
 
-      <div class="eyebrow">
-        <span class="eyebrow-dot"></span>
-        Come lavoriamo
+      <div class="trust-grid">
+        <div class="trust-item">
+          <span class="trust-icon"><Icon name="shield-check" size={20} /></span>
+          <div>
+            <h3 class="klaya-h4 trust-item-title">Verifiabilità prima di tutto</h3>
+            <p class="trust-item-body">Il testo dell'interfaccia di Klaya è scritto per invitarvi a controllare: cita la fonte, mostra la corrispondenza, e dice chiaramente quando un passaggio non è stato trovato.</p>
+          </div>
+        </div>
+        <div class="trust-item">
+          <span class="trust-icon"><Icon name="git-branch" size={20} /></span>
+          <div>
+            <h3 class="klaya-h4 trust-item-title">Ogni affermazione è tracciabile</h3>
+            <p class="trust-item-body">Dalla risposta al paragrafo, dalla pagina alla versione del documento — e di nuovo. Nulla viene affermato senza un percorso verificabile verso la fonte.</p>
+          </div>
+        </div>
+        <div class="trust-item">
+          <span class="trust-icon"><Icon name="lock" size={20} /></span>
+          <div>
+            <h3 class="klaya-h4 trust-item-title">I vostri documenti restano vostri</h3>
+            <p class="trust-item-body">La vostra knowledge base è cifrata e non viene mai utilizzata per addestrare modelli condivisi. La fiducia riguarda anche ciò che non facciamo con i vostri dati.</p>
+          </div>
+        </div>
       </div>
 
-      <div class="method-list">
-
-        <div class="method-step">
-          <div class="step-num">01</div>
-          <div>
-            <h3>Sul campo</h3>
-            <p>
-              Non risolviamo problemi a distanza. I nostri ingegneri entrano nelle aziende e ne
-              progettano le architetture dati sicure — ed è esattamente lì, sul campo, che vediamo
-              i problemi reali prima di chiunque altro.
-            </p>
-          </div>
-        </div>
-
-        <div class="method-step">
-          <div class="step-num">02</div>
-          <div>
-            <h3>Dal problema al prodotto</h3>
-            <p>
-              Quando un problema si ripete azienda dopo azienda, smette di essere un progetto e
-              diventa un'opportunità di prodotto. È così che è nata <strong>Klaya</strong>,
-              la nostra prima piattaforma.
-            </p>
-          </div>
-        </div>
-
-        <div class="method-step method-step--last">
-          <div class="step-num">03</div>
-          <div>
-            <h3>Klaya</h3>
-            <p>
-              La risposta al bisogno più urgente e trasversale che abbiamo incontrato — trasformare
-              la conoscenza chiusa negli archivi aziendali in risposte verificabili, sicure e
-              immediate. Il primo prodotto del nostro modello. Non sarà l'ultimo.
-            </p>
-          </div>
-        </div>
-
-      </div>
+      <p class="trust-footnote">Klaya cita sempre le fonti. Verificate sempre le risposte critiche sui passaggi sorgente.</p>
     </div>
   </section>
 
-  <!-- ══ VISIONE ════════════════════════════════════════════════ -->
-  <section class="section section-vision">
-    <div class="w">
-      <div style="max-width: 600px;">
-
-        <div class="section-label">Dove stiamo andando</div>
-
-        <h2 class="vision-title">AI di livello enterprise per tutti.</h2>
-
-        <p>
-          Crediamo che l'AI di livello enterprise — sicura, verificabile, conforme — non debba
-          restare un privilegio di pochi. Il tessuto produttivo italiano è fatto di imprese che
-          vivono di precisione, competenza e conoscenza accumulata in decenni di lavoro.
-        </p>
-        <p>
-          Sono esattamente le aziende che hanno più da guadagnare da un'AI di cui ci si possa
-          fidare. E sono quelle che il mercato sta ignorando.
-        </p>
-
-        <p class="vision-close">Noi siamo nati per loro.</p>
-
-      </div>
-    </div>
+  <!-- ══ CTA ═══════════════════════════════════════════════════ -->
+  <section class="cta">
+    <h2 class="klaya-h2">Vedi come risponde dai tuoi documenti.</h2>
+    <a href="/#cta" class="btn btn-primary btn-lg">
+      Prenota una demo
+      <Icon name="arrow-right" size={18} />
+    </a>
   </section>
 
 </Layout>
 
 <style>
-  /* ── Shared layout ─────────────────────────────────────────── */
-  .w {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 40px;
-  }
-
-  .section {
-    padding: 96px 0;
-    border-bottom: 1px solid var(--border-subtle);
-  }
-
-  .section-raised { background: var(--gray-900); }
-  .section-vision  { background: var(--blue-950); border-top: 1px solid var(--border-subtle); }
-
-  /* ── Eyebrow / labels ──────────────────────────────────────── */
-  .eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-family: var(--font-body);
-    font-size: 0.75rem;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--fuchsia-400);
-    margin-bottom: 24px;
-  }
-
-  .eyebrow-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--fuchsia-500);
-    box-shadow: 0 0 0 3px rgba(176,48,208,0.18);
-    display: block;
-    flex-shrink: 0;
-  }
-
-  .section-label {
-    font-family: var(--font-body);
-    font-size: 0.75rem;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--fuchsia-400);
-    margin-bottom: 20px;
-  }
-
-  /* ── Hero ──────────────────────────────────────────────────── */
   .hero {
-    background: var(--blue-950);
-    padding: 120px 0 96px;
-    border-bottom: 1px solid var(--border-subtle);
+    max-width: var(--container-md);
+    margin: 0 auto;
+    padding: 96px 28px 64px;
+    text-align: center;
   }
-
-  .hero h1 {
-    font-family: var(--font-display);
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    font-weight: 800;
-    letter-spacing: -0.04em;
-    line-height: 1.05;
+  .hero-title {
+    font-family: var(--font-sans);
+    font-size: clamp(2.25rem, 5vw, 3.5rem);
+    font-weight: var(--weight-bold);
+    letter-spacing: var(--tracking-display);
+    line-height: 1.08;
     color: var(--text-primary);
-    margin: 0 0 40px;
+    margin: 14px 0 0;
+  }
+  .hero-lead {
+    font-family: var(--font-sans);
+    font-size: var(--text-body-lg);
+    color: var(--text-secondary);
+    line-height: 1.6;
+    max-width: 620px;
+    margin: 22px auto 0;
   }
 
-  blockquote {
-    border-left: 3px solid var(--fuchsia-500);
-    padding: 24px 32px;
-    background: rgba(176,48,208,0.06);
-    border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
-    font-family: var(--font-display);
-    font-size: clamp(1.125rem, 2.5vw, 1.375rem);
-    font-weight: 500;
-    color: var(--text-primary);
-    line-height: 1.5;
-    max-width: 560px;
-  }
+  .section { max-width: var(--container-xl); margin: 0 auto; padding: 0 28px 80px; }
 
-  /* ── Story section ─────────────────────────────────────────── */
-  .story-grid {
-    display: grid;
-    grid-template-columns: 1fr 280px;
-    gap: 80px;
-    align-items: start;
-  }
-
-  .story-text p {
-    font-family: var(--font-body);
-    font-size: 1rem;
+  .row { display: grid; grid-template-columns: 1fr 320px; gap: 64px; align-items: start; }
+  .row-text p {
+    font-family: var(--font-sans);
+    font-size: var(--text-body);
     color: var(--text-secondary);
     line-height: 1.7;
-    margin: 0 0 24px;
-    text-wrap: pretty;
+    margin: 20px 0 0;
   }
 
-  .pull-quote {
-    font-size: 1.125rem !important;
-    color: var(--text-primary) !important;
-    border-left: 3px solid var(--fuchsia-500);
-    padding-left: 24px;
-    margin: 36px 0 0 !important;
-  }
-
-  /* ── Aside cards ───────────────────────────────────────────── */
-  .story-aside {
-    position: sticky;
-    top: 80px;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-  }
-
+  .row-aside { display: flex; flex-direction: column; gap: 14px; }
   .aside-card {
-    background: var(--gray-900);
+    background: var(--surface-card);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-lg);
-    padding: 22px 24px;
+    padding: 20px 22px;
   }
-
-  .aside-card--warm {
-    background: rgba(176,48,208,0.07);
-    border-color: rgba(176,48,208,0.22);
-  }
-
+  .aside-card--brand { background: var(--klaya-yellow-50); border-color: var(--klaya-yellow-200); }
   .aside-label {
-    font-family: var(--font-body);
-    font-size: 0.7rem;
-    font-weight: 500;
+    font-family: var(--font-sans);
+    font-size: var(--text-caption);
+    font-weight: var(--weight-semibold);
     letter-spacing: 0.07em;
     text-transform: uppercase;
     color: var(--text-tertiary);
     margin-bottom: 8px;
   }
-
-  .aside-label--warm { color: var(--fuchsia-400); }
-
+  .aside-label--brand { color: var(--klaya-yellow-700); }
   .aside-value {
-    font-family: var(--font-display);
-    font-size: 1.25rem;
-    font-weight: 700;
+    font-family: var(--font-sans);
+    font-size: var(--text-h4);
+    font-weight: var(--weight-bold);
+    letter-spacing: var(--tracking-heading);
+    line-height: 1.3;
     color: var(--text-primary);
-    letter-spacing: -0.02em;
-    margin-bottom: 4px;
-    line-height: 1.2;
   }
+  .aside-value--brand { color: var(--klaya-yellow-800); }
 
-  .aside-value--warm { color: var(--fuchsia-300); }
-
-  .aside-desc {
-    font-family: var(--font-body);
-    font-size: 0.8125rem;
-    color: var(--text-tertiary);
-    line-height: 1.4;
+  .trust { background: var(--klaya-neutral-900); color: var(--text-on-inverse); }
+  .trust-inner { max-width: var(--container-xl); margin: 0 auto; padding: 80px 28px; }
+  .trust-overline {
+    font-family: var(--font-sans);
+    font-weight: var(--weight-semibold);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-brand);
   }
+  .trust-title { margin-top: 10px; color: #fff; max-width: 640px; }
 
-  /* ── Il nome section ───────────────────────────────────────── */
-  .nome-title {
-    font-family: var(--font-display);
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    font-weight: 800;
-    letter-spacing: -0.04em;
-    line-height: 1.05;
-    color: var(--text-primary);
-    margin: 0 0 40px;
+  .trust-grid {
+    margin-top: 48px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
   }
-
-  .section-raised p {
-    font-family: var(--font-body);
-    font-size: 1rem;
-    color: var(--text-secondary);
-    line-height: 1.7;
-    margin: 0 0 20px;
-    text-wrap: pretty;
+  .trust-item { display: flex; flex-direction: column; gap: 14px; }
+  .trust-icon {
+    width: 40px; height: 40px; border-radius: var(--radius-md);
+    background: rgba(255,255,255,0.06); border: 1px solid var(--klaya-neutral-700);
+    color: var(--color-brand);
+    display: inline-flex; align-items: center; justify-content: center;
   }
+  .trust-item-title { color: #fff; margin-bottom: 6px; }
+  .trust-item-body { font-family: var(--font-sans); font-size: var(--text-body-sm); color: var(--klaya-neutral-400); line-height: 1.6; margin: 0; }
 
-  .section-raised p em {
+  .trust-footnote {
+    margin-top: 48px;
+    padding-top: 28px;
+    border-top: 1px solid var(--klaya-neutral-700);
+    font-family: var(--font-sans);
     font-style: italic;
-    color: var(--text-primary);
+    font-size: var(--text-body-sm);
+    color: var(--klaya-neutral-400);
   }
 
-  .raised-card {
-    margin-top: 36px;
-    background: var(--gray-800);
-    border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-lg);
-    padding: 24px 28px;
-  }
-
-  .raised-card p {
-    font-family: var(--font-display) !important;
-    font-size: 1.125rem !important;
-    font-weight: 600 !important;
-    letter-spacing: -0.02em;
-    line-height: 1.45 !important;
-    color: var(--text-primary) !important;
-    margin: 0 !important;
-    text-wrap: balance;
-  }
-
-  /* ── Method steps ──────────────────────────────────────────── */
-  .method-list {
-    max-width: 720px;
+  .cta {
+    max-width: var(--container-md);
+    margin: 0 auto;
+    padding: 80px 28px 96px;
+    text-align: center;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 28px;
   }
+  .cta h2 { color: var(--text-primary); }
 
-  .method-step {
-    display: grid;
-    grid-template-columns: 56px 1fr;
-    gap: 32px;
-    padding: 32px 0;
-    border-top: 1px solid var(--border-subtle);
-  }
-
-  .method-step--last {
-    border-bottom: 1px solid var(--border-subtle);
-  }
-
-  .step-num {
-    font-family: var(--font-mono);
-    font-size: 0.8125rem;
-    font-weight: 500;
-    color: var(--fuchsia-500);
-    letter-spacing: 0.06em;
-    padding-top: 3px;
-  }
-
-  .method-step h3 {
-    font-family: var(--font-display);
-    font-size: 1.25rem;
-    font-weight: 600;
-    letter-spacing: -0.02em;
-    color: var(--text-primary);
-    margin: 0 0 14px;
-    line-height: 1.3;
-  }
-
-  .method-step p {
-    font-family: var(--font-body);
-    font-size: 1rem;
-    color: var(--text-secondary);
-    line-height: 1.7;
-    margin: 0;
-    text-wrap: pretty;
-  }
-
-  .method-step strong {
-    font-weight: 600;
-    color: var(--fuchsia-400);
-  }
-
-  /* ── Vision section ────────────────────────────────────────── */
-  .vision-title {
-    font-family: var(--font-display);
-    font-size: clamp(1.875rem, 3.5vw, 2.75rem);
-    font-weight: 700;
-    letter-spacing: -0.03em;
-    line-height: 1.15;
-    color: var(--text-primary);
-    margin: 0 0 32px;
-    text-wrap: balance;
-  }
-
-  .section-vision p {
-    font-family: var(--font-body);
-    font-size: 1rem;
-    color: var(--text-secondary);
-    line-height: 1.7;
-    margin: 0 0 20px;
-    text-wrap: pretty;
-  }
-
-  .vision-close {
-    font-family: var(--font-display) !important;
-    font-size: 1.25rem !important;
-    font-weight: 600 !important;
-    letter-spacing: -0.02em;
-    color: var(--fuchsia-400) !important;
-    margin: 0 !important;
-  }
-
-  /* ── Responsive ────────────────────────────────────────────── */
   @media (max-width: 900px) {
-    .w { padding: 0 24px; }
-    .hero { padding: 72px 0 56px; }
-    .section { padding: 64px 0; }
-    .story-grid { grid-template-columns: 1fr; gap: 48px; }
-    .story-aside { position: static; flex-direction: row; flex-wrap: wrap; }
-    .aside-card { flex: 1; min-width: 160px; }
-  }
-
-  @media (max-width: 600px) {
-    .w { padding: 0 20px; }
-    .method-step { grid-template-columns: 40px 1fr; gap: 20px; }
+    .row { grid-template-columns: 1fr; gap: 32px; }
+    .trust-grid { grid-template-columns: 1fr; gap: 32px; }
   }
 </style>

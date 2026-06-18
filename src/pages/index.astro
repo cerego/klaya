@@ -1,185 +1,390 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Icon from '../components/Icon.astro';
+
+const sources = [
+  { n: '1', title: 'Contratto Quadro Fornitori 2024' },
+  { n: '2', title: 'Politica Acquisti v3' },
+];
 ---
 
 <Layout
-  title="Home"
-  description="Progettiamo e costruiamo AI sicura, verificabile e conforme all'AI Act per la media impresa italiana."
+  title="La conoscenza aziendale, accessibile a chi serve"
+  description="Klaya risponde dalle documentazioni aziendali e cita sempre la fonte esatta — per i team interni, la rete di vendita, i partner e i clienti."
 >
 
   <!-- ══ HERO ══════════════════════════════════════════════════ -->
-  <section class="hero">
-    <div class="w">
+  <section class="hero" id="hero">
 
-      <div class="eyebrow">
-        <span class="eyebrow-dot"></span>
-        AI enterprise · Media impresa italiana
-      </div>
-
-      <h1>L'AI di livello enterprise non dovrebbe essere un privilegio delle multinazionali.</h1>
-
-      <p class="lead">
-        Progettiamo e costruiamo AI sicura, verificabile e conforme all'AI Act per la media impresa
-        italiana. Sul campo, dentro le aziende, dove i problemi sono reali.
-      </p>
-
-      <div class="cta-row">
-        <a href="#klaya" class="btn btn-primary btn-lg">Scopri Klaya</a>
-        <a href="#contatti" class="btn btn-ghost btn-lg">Parla con noi</a>
-      </div>
-
+    <div class="hero-badge">
+      <span class="badge badge--brand-solid">Early Adopter</span>
+      <span>Posti limitati — accesso prioritario al co-design</span>
+      <Icon name="arrow-right" size={14} class="hero-badge-arrow" />
     </div>
+
+    <h1 class="hero-title">La conoscenza della vostra azienda,<br /><span class="hero-title-accent">accessibile a chi serve, quando serve.</span></h1>
+
+    <p class="hero-lead">
+      Klaya risponde dalle documentazioni aziendali e cita sempre la fonte esatta — per i team interni, la rete di vendita, i partner e i clienti.
+    </p>
+
+    <div class="hero-cta">
+      <a href="#cta" class="btn btn-primary btn-lg">
+        Richiedi una demo
+        <Icon name="arrow-right" size={18} />
+      </a>
+      <a href="#prodotto" class="btn btn-secondary btn-lg">
+        <Icon name="play" size={16} />
+        Guarda come funziona
+      </a>
+    </div>
+
+    <p class="hero-footnote">Canone fisso · Cloud europeo · GDPR nativo</p>
+
+    <div class="hero-preview">
+      <div class="hero-preview-bar">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        <span class="hero-preview-label">Area legale · Assistente Klaya</span>
+      </div>
+      <div class="hero-preview-grid">
+        <div class="hero-preview-chat">
+          <div class="chat-question">Quali sono i termini di rescissione del contratto fornitore?</div>
+          <div class="chat-answer-row">
+            <span class="chat-avatar"><img src="/logos/klaya-pictogram.png" alt="" /></span>
+            <p class="chat-answer">
+              Entrambe le parti possono recedere per convenienza con 90 giorni di preavviso scritto<sup class="cite">1</sup>, da inviare ad ufficio Legale e Acquisti entro cinque giorni lavorativi<sup class="cite">2</sup>.
+            </p>
+          </div>
+          <div class="chat-traced">
+            <Icon name="shield-check" size={14} />
+            Tracciato su 3 fonti
+          </div>
+        </div>
+        <div class="hero-preview-sources">
+          {sources.map((s) => (
+            <div class="source-card">
+              <div class="source-card-head">
+                <span class="source-badge">{s.n}</span>
+                <span class="source-title">{s.title}</span>
+              </div>
+              <p class="source-quote">&ldquo;&hellip;recesso per convenienza con novanta (90) giorni di preavviso scritto&hellip;&rdquo;</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+
   </section>
 
   <!-- ══ PROBLEMA ══════════════════════════════════════════════ -->
   <section class="section" id="problema">
-    <div class="w">
-      <div style="max-width: 600px;">
-        <h2>La complessità è il prezzo che le aziende pagano per l'AI</h2>
-        <p>
-          Tra il "potremmo usare l'AI" e il "la usiamo davvero, in sicurezza" c'è una voragine:
-          integrazioni, rischi sui dati, allucinazioni dei modelli, conformità normativa. Solo le
-          grandi aziende possono permettersi di attraversarla.
-        </p>
-        <p class="pull-quote">
-          Noi esistiamo per chi resta sul bordo. Il nostro mestiere è tenerci la complessità —
-          e restituire all'azienda solo il risultato.
-        </p>
-      </div>
+    <div class="section-head">
+      <span class="klaya-overline">Il problema</span>
+      <h2 class="klaya-h1">Il costo nascosto di una domanda semplice</h2>
+    </div>
+    <div class="problema-body">
+      <p>L'agente chiama la sede per avere il listino aggiornato. Il fornitore lavora su una specifica tecnica di sei mesi fa. Il cliente apre un ticket per un'informazione già documentata a pagina dodici del manuale. Ogni episodio, preso singolarmente, sembra trascurabile.</p>
+      <p>Sommati su un anno, erodono la marginalità, rallentano le operazioni e consumano il tempo delle risorse più qualificate.</p>
+      <blockquote class="problema-quote">La soluzione non è un nuovo sistema. È rendere interrogabile quello che avete già.</blockquote>
     </div>
   </section>
 
-  <!-- ══ COME LAVORIAMO ════════════════════════════════════════ -->
-  <section class="section" id="approccio">
-    <div class="w">
-
-      <div class="section-label">Come lavoriamo</div>
-
-      <div class="feature-grid">
-
-        <div class="card">
-          <div class="icon-box">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
-              <circle cx="9" cy="7" r="4"/>
-              <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
-            </svg>
-          </div>
-          <div>
-            <h3>Sul campo, non a distanza.</h3>
-            <p>I nostri ingegneri entrano nelle aziende e ne progettano le architetture dati sicure. È lì che vediamo i problemi reali prima di chiunque altro.</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="icon-box">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <rect x="2" y="3" width="20" height="14" rx="2"/>
-              <path d="M8 21h8M12 17v4"/>
-            </svg>
-          </div>
-          <div>
-            <h3>Dal progetto al prodotto.</h3>
-            <p>Quando un problema si ripete azienda dopo azienda, lo trasformiamo in un prodotto scalabile — non lo risolviamo un cliente alla volta.</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <div class="icon-box">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-            </svg>
-          </div>
-          <div>
-            <h3>Sicurezza e conformità dalla nascita.</h3>
-            <p>Architetture progettate per gestire dati complessi in sicurezza, nativamente allineate all'AI Act europeo. Non come ripensamento.</p>
-          </div>
-        </div>
-
+  <!-- ══ PRODOTTO ══════════════════════════════════════════════ -->
+  <section class="section" id="prodotto">
+    <div class="section-head">
+      <span class="klaya-overline">Che cos'è Klaya</span>
+      <h2 class="klaya-h1">Un assistente che risponde — e cita sempre la fonte</h2>
+    </div>
+    <div class="feature-grid">
+      <div class="card card--elevated">
+        <span class="feature-icon"><Icon name="shield-check" size={22} /></span>
+        <h3 class="klaya-h4">Solo dai vostri documenti</h3>
+        <p class="klaya-body-sm feature-body">Vincolata ai documenti aziendali approvati. Se l'informazione non è a sistema, non la inventa — lo dice.</p>
       </div>
+      <div class="card card--elevated">
+        <span class="feature-icon"><Icon name="git-branch" size={22} /></span>
+        <h3 class="klaya-h4">Cita sempre la fonte</h3>
+        <p class="klaya-body-sm feature-body">Ogni risposta indica documento e pagina, verificabili con un click. Nessuna ambiguità sull'origine.</p>
+      </div>
+      <div class="card card--elevated">
+        <span class="feature-icon"><Icon name="building-2" size={22} /></span>
+        <h3 class="klaya-h4">Dove già lavorate</h3>
+        <p class="klaya-body-sm feature-body">Teams, Office 365, browser e mobile. Nessuna nuova app, nessuna formazione richiesta.</p>
+      </div>
+    </div>
+    <div class="screenshot-placeholder screenshot-placeholder--hero">
+      <Icon name="camera" size={28} />
+      <span>Esempio: Klaya attivo in Microsoft Teams</span>
     </div>
   </section>
 
-  <!-- ══ KLAYA ═════════════════════════════════════════════════ -->
-  <section class="section section-raised" id="klaya">
-    <div class="w">
+  <!-- ══ SICUREZZA ═════════════════════════════════════════════ -->
+  <section class="trace" id="sicurezza">
+    <div class="trace-inner">
+      <div class="section-head trace-head">
+        <span class="trace-overline">Controllo</span>
+        <h2 class="klaya-h1 trace-title">Aprire la conoscenza senza perdere il controllo</h2>
+        <p class="trace-lead">"Se apro la piattaforma a partner e clienti, cosa rischio?"</p>
+      </div>
+      <div class="trace-grid">
+        <div class="trace-step">
+          <div class="trace-step-head">
+            <span class="trace-step-icon"><Icon name="users" size={22} /></span>
+            <span class="trace-step-num">01</span>
+          </div>
+          <h3 class="klaya-h3 trace-step-title">Isolamento per ruolo</h3>
+          <p class="klaya-body-sm trace-step-body">La separazione è architetturale, non basata su permessi. Il fornitore non raggiunge i dati HR o finanziari — strutturalmente impossibile.</p>
+        </div>
+        <div class="trace-step">
+          <div class="trace-step-head">
+            <span class="trace-step-icon"><Icon name="search" size={22} /></span>
+            <span class="trace-step-num">02</span>
+          </div>
+          <h3 class="klaya-h3 trace-step-title">Tracciabilità completa</h3>
+          <p class="klaya-body-sm trace-step-body">Registro di audit per ogni accesso: chi ha chiesto cosa, quando e su quale canale. Sempre disponibile, esportabile.</p>
+        </div>
+        <div class="trace-step">
+          <div class="trace-step-head">
+            <span class="trace-step-icon"><Icon name="shield-check" size={22} /></span>
+            <span class="trace-step-num">03</span>
+          </div>
+          <h3 class="klaya-h3 trace-step-title">Conformità nativa</h3>
+          <p class="klaya-body-sm trace-step-body">GDPR + AI Act, dati cifrati a riposo e in transito, infrastrutture cloud europee. Nessun dato usato per addestrare modelli condivisi.</p>
+        </div>
+      </div>
+      <p class="trace-footnote">La separazione è architetturale, non amministrativa.</p>
+    </div>
+  </section>
 
-      <div style="margin-bottom: 44px;">
-        <span class="badge-success">
-          <span class="badge-dot"></span>
-          Primo prodotto
-        </span>
+  <!-- ══ OLTRE I CONFINI ═══════════════════════════════════════ -->
+  <section class="section" id="oltre">
+    <div class="section-head">
+      <span class="klaya-overline">La visione</span>
+      <h2 class="klaya-h1">Il valore oltre i confini aziendali</h2>
+      <p class="section-lead">Il vantaggio competitivo emerge quando la conoscenza fluisce — controllata — lungo tutta la catena del valore.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="card card--elevated">
+        <span class="feature-icon"><Icon name="users" size={22} /></span>
+        <h3 class="klaya-h4">Rete di vendita</h3>
+        <p class="klaya-body-sm feature-body">Agenti e distributori interrogano cataloghi, listini e policy aggiornati in tempo reale. Meno chiamate alla sede, risposte più rapide ai clienti.</p>
+      </div>
+      <div class="card card--elevated">
+        <span class="feature-icon"><Icon name="truck" size={22} /></span>
+        <h3 class="klaya-h4">Fornitori &amp; supply chain</h3>
+        <p class="klaya-body-sm feature-body">I partner consultano capitolati e procedure tecniche in autonomia. Meno errori da documentazione obsoleta, meno iterazioni.</p>
+      </div>
+      <div class="card card--elevated">
+        <span class="feature-icon"><Icon name="message-square" size={22} /></span>
+        <h3 class="klaya-h4">Clienti finali</h3>
+        <p class="klaya-body-sm feature-body">Portale self-service: il cliente trova la risposta dialogando con manuali e FAQ. Il ticket diventa l'eccezione, non la norma.</p>
+      </div>
+    </div>
+    <div class="screenshot-placeholder screenshot-placeholder--card">
+      <Icon name="camera" size={24} />
+      <span>Portale self-service clienti</span>
+    </div>
+  </section>
+
+  <!-- ══ CONFRONTO ═════════════════════════════════════════════ -->
+  <section class="section" id="confronto">
+    <div class="section-head">
+      <span class="klaya-overline">Build vs Buy</span>
+      <h2 class="klaya-h1">Perché non svilupparlo internamente</h2>
+      <p class="section-lead">La trappola del "fai da te" non è il prototipo iniziale: è il debito tecnico ricorrente che sottrae le risorse migliori al core business.</p>
+    </div>
+    <div class="compare-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Sviluppo interno</th>
+            <th class="col-klaya-head">Klaya</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="compare-row-label">Time-to-market</td>
+            <td class="col-other"><span class="cell-content"><Icon name="x" size={16} class="compare-icon compare-icon--no" />6–12 mesi</span></td>
+            <td class="col-klaya"><span class="cell-content"><Icon name="check" size={16} class="compare-icon compare-icon--yes" />Meno di 1 mese</span></td>
+          </tr>
+          <tr>
+            <td class="compare-row-label">Investimento iniziale</td>
+            <td class="col-other"><span class="cell-content"><Icon name="x" size={16} class="compare-icon compare-icon--no" />Alto (team + R&amp;D)</span></td>
+            <td class="col-klaya"><span class="cell-content"><Icon name="check" size={16} class="compare-icon compare-icon--yes" />Canone fisso, zero CapEx</span></td>
+          </tr>
+          <tr>
+            <td class="compare-row-label">Risorse IT dedicate</td>
+            <td class="col-other"><span class="cell-content"><Icon name="x" size={16} class="compare-icon compare-icon--no" />3+ full-time</span></td>
+            <td class="col-klaya"><span class="cell-content"><Icon name="check" size={16} class="compare-icon compare-icon--yes" />Nessuna</span></td>
+          </tr>
+          <tr>
+            <td class="compare-row-label">Manutenzione &amp; modelli AI</td>
+            <td class="col-other"><span class="cell-content"><Icon name="x" size={16} class="compare-icon compare-icon--no" />A carico vostro</span></td>
+            <td class="col-klaya"><span class="cell-content"><Icon name="check" size={16} class="compare-icon compare-icon--yes" />Inclusa e gestita</span></td>
+          </tr>
+          <tr>
+            <td class="compare-row-label">Integrazione Teams/SharePoint/CRM</td>
+            <td class="col-other"><span class="cell-content"><Icon name="x" size={16} class="compare-icon compare-icon--no" />Sviluppo custom</span></td>
+            <td class="col-klaya"><span class="cell-content"><Icon name="check" size={16} class="compare-icon compare-icon--yes" />Zero — nativa</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="copilot-note">
+      <h3 class="klaya-h4">E se avete già Microsoft Copilot?</h3>
+      <ul class="copilot-list">
+        <li>Copilot è progettato per l'interno: non offre un portale per partner e clienti esterni.</li>
+        <li>L'isolamento opera a livello di tenant, non di controparte: impossibile separare architetturalmente i dati per fornitore o rete di vendita.</li>
+      </ul>
+      <p class="copilot-aside">Se usate già Teams e SharePoint, Klaya si integra nativamente e fa ciò che Copilot non è progettato per fare: estendere la conoscenza alla rete esterna, con isolamento architetturale per ogni controparte.</p>
+    </div>
+  </section>
+
+  <!-- ══ CASI D'USO ════════════════════════════════════════════ -->
+  <section class="section" id="casi-duso">
+    <div class="section-head">
+      <span class="klaya-overline">Casi d'uso</span>
+      <h2 class="klaya-h1">Due settori, un problema comune</h2>
+    </div>
+    <div class="use-cases-grid">
+
+      <div class="use-case-card">
+        <div class="use-case-icon"><Icon name="headphones" size={22} /></div>
+        <h3 class="klaya-h3">Supporto tecnico</h3>
+        <p class="use-case-lead">Lo stesso operatore, le stesse domande, risposte diverse ogni volta. La conoscenza è nei thread chiusi e nei ticket risolti — inaccessibile nel momento in cui serve.</p>
+        <div class="use-case-points">
+          <div class="use-case-point"><strong>Risposta immediata.</strong> L'operatore ottiene la risposta corretta prima ancora di aprire il ticket — con la fonte esatta.</div>
+          <div class="use-case-point"><strong>Standardizzazione progressiva.</strong> Ogni risposta citata diventa un mattone della knowledge base: il sistema migliora con ogni interazione.</div>
+          <div class="use-case-point"><strong>Il ciclo virtuoso.</strong> Le anomalie senza risposta emergono in automatico — e diventano input per la documentazione tecnica.</div>
+        </div>
+        <p class="use-case-note">Impatto atteso: tempo medio di risposta ridotto, escalation al secondo livello in calo, onboarding accelerato.</p>
+        <div class="screenshot-placeholder screenshot-placeholder--card">
+          <Icon name="camera" size={22} />
+          <span>Interfaccia assistente supporto tecnico</span>
+        </div>
       </div>
 
-      <div class="klaya-grid">
-
-        <div>
-          <h2 class="klaya-title">Klaya</h2>
-          <p class="klaya-desc">
-            La piattaforma che trasforma la documentazione interna di un'azienda nella sua fonte
-            di risposte.
-          </p>
-          <a href="/about" class="btn btn-primary btn-lg">Scopri di più</a>
+      <div class="use-case-card">
+        <div class="use-case-icon"><Icon name="scale" size={22} /></div>
+        <h3 class="klaya-h3">Legal</h3>
+        <p class="use-case-lead">Migliaia di documenti, decine di fascicoli, pressione costante sul tempo fatturabile. Il rischio non nasce dalla negligenza — nasce dal volume.</p>
+        <div class="use-case-points">
+          <div class="use-case-point"><strong>Ricerca semantica e full-text.</strong> Trovate il precedente rilevante in secondi, non in ore — su tutti i fascicoli indicizzati.</div>
+          <div class="use-case-point"><strong>Segregazione per fascicolo e cliente.</strong> La separazione architetturale garantisce che nessun dato di un fascicolo sia raggiungibile da un altro.</div>
+          <div class="use-case-point"><strong>Citazione sempre all'originale.</strong> Ogni estratto riporta documento, pagina e paragrafo. La verifica è immediata.</div>
         </div>
+        <p class="use-case-note">Adatto a: studi legali, uffici legal &amp; compliance, società di consulenza con archivi documentali complessi.</p>
+        <div class="screenshot-placeholder screenshot-placeholder--card">
+          <Icon name="camera" size={22} />
+          <span>Ricerca semantica su archivio documenti</span>
+        </div>
+      </div>
 
-        <ul class="klaya-features">
-          <li>
-            <span class="kf-icon">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
-              </svg>
-            </span>
-            <div>
-              <strong>Niente allucinazioni.</strong>
-              <span>Ogni risposta cita la fonte esatta. Se non è nei tuoi documenti, Klaya non lo dice.</span>
-            </div>
-          </li>
-          <li>
-            <span class="kf-icon">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-              </svg>
-            </span>
-            <div>
-              <strong>I tuoi dati restano tuoi.</strong>
-              <span>Infrastruttura sicura, nessun dato che alimenta modelli di terzi.</span>
-            </div>
-          </li>
-          <li>
-            <span class="kf-icon">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-              </svg>
-            </span>
-            <div>
-              <strong>Conforme dalla nascita.</strong>
-              <span>Nativamente allineata all'AI Act europeo.</span>
-            </div>
-          </li>
+    </div>
+  </section>
+
+  <!-- ══ PREZZI ════════════════════════════════════════════════ -->
+  <section class="section" id="prezzi">
+    <div class="section-head">
+      <span class="klaya-overline">Il modello economico</span>
+      <h2 class="klaya-h1">Due modelli, una scelta su misura</h2>
+      <p class="section-lead">Canone di piattaforma fisso. Il consumo AI è visibile e governato da voi, in tempo reale.</p>
+    </div>
+    <div class="pricing-grid">
+
+      <div class="pricing-card">
+        <div class="pricing-card-head">
+          <h3 class="klaya-h3">Self-Hosted</h3>
+          <p class="pricing-card-desc">Per chi vuole controllo totale sull'infrastruttura</p>
+        </div>
+        <ul class="pricing-features">
+          <li><Icon name="check" size={16} class="pricing-check" />La piattaforma gira sulla vostra infrastruttura (cloud o on-premise)</li>
+          <li><Icon name="check" size={16} class="pricing-check" />Klaya fornisce software, aggiornamenti e supporto tecnico dedicato</li>
+          <li><Icon name="check" size={16} class="pricing-check" />Ideale per team IT strutturati o requisiti di data sovereignty</li>
         </ul>
-
+        <a href="#cta" class="btn btn-secondary btn-lg pricing-cta">
+          Richiedi un preventivo
+          <Icon name="arrow-right" size={18} />
+        </a>
       </div>
 
-      <p class="klaya-footnote">
-        Manuali, procedure e storico aziendale diventano un vantaggio competitivo immediato.
-      </p>
+      <div class="pricing-card pricing-card--featured">
+        <div class="pricing-card-badge">Consigliato</div>
+        <div class="pricing-card-head">
+          <h3 class="klaya-h3">Managed</h3>
+          <p class="pricing-card-desc">Zero infrastruttura, tutto incluso</p>
+        </div>
+        <ul class="pricing-features">
+          <li><Icon name="check" size={16} class="pricing-check pricing-check--brand" />Klaya ospita e gestisce tutto su cloud europeo dedicato</li>
+          <li><Icon name="check" size={16} class="pricing-check pricing-check--brand" />Uptime, sicurezza, aggiornamenti dei modelli e backup inclusi</li>
+          <li><Icon name="check" size={16} class="pricing-check pricing-check--brand" />Zero carico IT, zero CapEx</li>
+          <li><Icon name="check" size={16} class="pricing-check pricing-check--brand" />La scelta naturale per chi non vuole gestire un'infrastruttura AI interna</li>
+        </ul>
+        <a href="#cta" class="btn btn-primary btn-lg pricing-cta">
+          Richiedi un preventivo
+          <Icon name="arrow-right" size={18} />
+        </a>
+      </div>
 
+    </div>
+    <p class="pricing-note">In entrambi i modelli il consumo AI è trasparente e governato da voi. Nessun costo aggiuntivo per utente.</p>
+  </section>
+
+  <!-- ══ EARLY ADOPTER ═════════════════════════════════════════ -->
+  <section class="ea-section" id="early-adopter">
+    <div class="ea-inner">
+      <span class="klaya-overline">Early Adopter Program</span>
+      <h2 class="klaya-h1 ea-title">Un programma riservato a pochi partner. Per scelta.</h2>
+      <p class="ea-body">Stiamo selezionando un numero limitato di organizzazioni con cui verticalizzare la piattaforma su casi d'uso reali. Una di queste è una collaborazione in corso con un importante gruppo industriale italiano del settore energia.</p>
+      <blockquote class="ea-quote">Chi entra ora non compra un software rigido: lo plasma sui propri flussi, con co-design diretto sul nostro team e condizioni riservate ai primi partner.</blockquote>
+      <p class="ea-footnote">È una finestra, non uno stato permanente: la fase early adopter è il momento di massimo vantaggio per chi sceglie di esserci.</p>
+      <a href="#cta" class="btn btn-primary btn-lg">
+        Parla con noi
+        <Icon name="arrow-right" size={18} />
+      </a>
     </div>
   </section>
 
-  <!-- ══ PER CHI ════════════════════════════════════════════════ -->
-  <section class="section" id="contatti">
-    <div class="w">
-      <div style="max-width: 600px;">
-        <div class="section-label">Per chi costruiamo</div>
-        <h2>Il tessuto produttivo italiano ci appartiene.</h2>
-        <p>
-          Il tessuto produttivo italiano è fatto di imprese che vivono di precisione, competenza
-          e conoscenza accumulata in decenni di lavoro. Sono le aziende che hanno più da guadagnare
-          da un'AI di cui ci si possa fidare — e quelle che il mercato sta ignorando.
-        </p>
-        <p style="margin-bottom: 36px;">Noi siamo nati per loro.</p>
-        <a href="/about" class="btn btn-ghost btn-lg">Scopri la nostra storia</a>
+  <!-- ══ ROADMAP ═══════════════════════════════════════════════ -->
+  <section class="section" id="roadmap">
+    <div class="section-head">
+      <span class="klaya-overline">La roadmap</span>
+      <h2 class="klaya-h1">Un percorso strutturato, senza rischi per l'operatività</h2>
+    </div>
+    <div class="roadmap-grid">
+      <div class="roadmap-step">
+        <div class="roadmap-week">Settimana 1</div>
+        <h3 class="klaya-h4 roadmap-title">Allineamento strategico</h3>
+        <p class="klaya-body-sm roadmap-body">60 minuti con i responsabili operativi. Si isola il caso d'uso a maggior ROI e si definisce il perimetro documentale su cui Klaya opererà.</p>
+      </div>
+      <div class="roadmap-step">
+        <div class="roadmap-week">Settimane 2–3</div>
+        <h3 class="klaya-h4 roadmap-title">Configurazione &amp; validazione</h3>
+        <p class="klaya-body-sm roadmap-body">Il sistema viene alimentato con i documenti reali dell'organizzazione. I key user testano l'accuratezza delle risposte e l'adeguatezza delle fonti.</p>
+      </div>
+      <div class="roadmap-step">
+        <div class="roadmap-week">Settimana 4</div>
+        <h3 class="klaya-h4 roadmap-title">Go-live</h3>
+        <p class="klaya-body-sm roadmap-body">Attivazione per gli utenti autorizzati sui canali prescelti. La piattaforma è in produzione: operativa, monitorata, supportata.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CTA FINALE ════════════════════════════════════════════ -->
+  <section class="cta-wrap" id="cta">
+    <div class="cta-panel">
+      <img src="/logos/klaya-pictogram-dark.png" alt="" class="cta-pictogram" />
+      <span class="cta-kicker">La proposta</span>
+      <p class="cta-sublead">Non l'ennesima demo da quindici minuti. Un tavolo tecnico e strategico, partendo da un problema reale del vostro settore.</p>
+      <h2 class="cta-title">Qual è l'impatto sul vostro EBITDA se la vostra rete vendita, i fornitori e i dipendenti smettessero di cercare informazioni e iniziassero semplicemente a trovarle?</h2>
+      <div class="cta-buttons">
+        <a href="mailto:info@klaya.io" class="btn btn-inverse btn-lg">
+          Prenota una sessione
+          <Icon name="arrow-right" size={18} />
+        </a>
+        <a href="#prezzi" class="btn btn-secondary btn-lg">Scopri i prezzi</a>
       </div>
     </div>
   </section>
@@ -187,315 +392,524 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <style>
-  /* ── Shared layout ─────────────────────────────────────────── */
-  .w {
-    max-width: 1280px;
+  /* ── Hero ───────────────────────────────────────────────── */
+  .hero {
+    max-width: var(--container-xl);
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 76px 28px 60px;
+    text-align: center;
   }
-
-  .section {
-    padding: 96px 0;
-    border-bottom: 1px solid var(--border-subtle);
-  }
-
-  .section-raised {
-    background: var(--gray-900);
-  }
-
-  /* ── Eyebrow / labels ──────────────────────────────────────── */
-  .eyebrow {
+  .hero-badge {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    font-family: var(--font-body);
-    font-size: 0.75rem;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--fuchsia-400);
-    margin-bottom: 24px;
-  }
-
-  .eyebrow-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--fuchsia-500);
-    box-shadow: 0 0 0 3px rgba(176,48,208,0.18);
-    display: block;
-    flex-shrink: 0;
-  }
-
-  .section-label {
-    font-family: var(--font-body);
-    font-size: 0.75rem;
-    font-weight: 500;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--fuchsia-400);
-    margin-bottom: 48px;
-  }
-
-  /* ── Hero ──────────────────────────────────────────────────── */
-  .hero {
-    background: var(--blue-950);
-    padding: 128px 0 104px;
-    border-bottom: 1px solid var(--border-subtle);
-  }
-
-  .hero h1 {
-    font-family: var(--font-display);
-    font-size: clamp(2.25rem, 4.5vw, 3.75rem);
-    font-weight: 800;
-    letter-spacing: -0.04em;
-    line-height: 1.06;
-    color: var(--text-primary);
-    max-width: 680px;
-    margin: 0 0 28px;
-    text-wrap: balance;
-  }
-
-  .lead {
-    font-family: var(--font-body);
-    font-size: 1.125rem;
+    padding: 6px 14px;
+    border-radius: var(--radius-full);
+    background: var(--surface-card);
+    border: 1px solid var(--border-subtle);
+    box-shadow: var(--shadow-xs);
+    margin-bottom: 26px;
+    font-family: var(--font-sans);
+    font-size: var(--text-body-sm);
     color: var(--text-secondary);
-    line-height: 1.65;
-    max-width: 500px;
-    margin: 0 0 40px;
-    text-wrap: pretty;
+  }
+  .hero-badge-arrow { color: var(--text-tertiary); }
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 3px 10px;
+    border-radius: var(--radius-full);
+    font-family: var(--font-sans);
+    font-size: var(--text-caption);
+    font-weight: var(--weight-semibold);
+  }
+  .badge--brand-solid { background: var(--color-brand); color: var(--color-on-brand); }
+  .hero-title {
+    font-family: var(--font-sans);
+    font-size: clamp(2.1rem, 5vw, 3.75rem);
+    font-weight: var(--weight-bold);
+    line-height: 1.07;
+    letter-spacing: var(--tracking-display);
+    margin: 0 auto;
+    max-width: 900px;
+    color: var(--text-primary);
+  }
+  .hero-title-accent { color: var(--color-brand); }
+  .hero-lead {
+    font-family: var(--font-sans);
+    font-size: var(--text-body-lg);
+    color: var(--text-secondary);
+    max-width: 640px;
+    margin: 22px auto 0;
+    line-height: 1.55;
+  }
+  .hero-cta { display: flex; gap: 12px; justify-content: center; margin-top: 32px; }
+  .hero-footnote {
+    font-family: var(--font-sans);
+    font-size: var(--text-caption);
+    color: var(--text-tertiary);
+    margin-top: 16px;
   }
 
-  /* ── Buttons ───────────────────────────────────────────────── */
-  .cta-row {
+  /* ── Hero preview card ───────────────────────────────── */
+  .hero-preview {
+    margin-top: 52px;
+    border-radius: var(--radius-xl);
+    background: var(--surface-card);
+    border: 1px solid var(--border-subtle);
+    box-shadow: var(--shadow-xl);
+    overflow: hidden;
+    text-align: left;
+  }
+  .hero-preview-bar {
     display: flex;
     align-items: center;
-    gap: 14px;
-    flex-wrap: wrap;
-  }
-
-  .btn {
-    display: inline-flex;
-    align-items: center;
     gap: 8px;
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+  .dot { width: 11px; height: 11px; border-radius: 50%; background: var(--klaya-neutral-200); }
+  .hero-preview-label { margin-left: 8px; font-family: var(--font-sans); font-size: var(--text-caption); color: var(--text-tertiary); }
+  .hero-preview-grid { display: grid; grid-template-columns: 1fr 320px; }
+  .hero-preview-chat { padding: 26px 28px; border-right: 1px solid var(--border-subtle); }
+  .chat-question {
+    display: inline-flex;
+    padding: 10px 14px;
+    border-radius: var(--radius-lg);
+    background: var(--klaya-neutral-900);
+    color: #fff;
+    font-family: var(--font-sans);
+    font-size: var(--text-body-sm);
+    margin-bottom: 18px;
+  }
+  .chat-answer-row { display: flex; gap: 12px; }
+  .chat-avatar {
+    width: 30px; height: 30px; flex: none;
     border-radius: var(--radius-md);
-    font-family: var(--font-body);
-    font-weight: 500;
-    text-decoration: none;
-    transition: background 150ms, color 150ms, border-color 150ms;
-    cursor: pointer;
-    white-space: nowrap;
+    background: var(--klaya-neutral-900);
+    display: flex; align-items: center; justify-content: center;
   }
-  .btn:active { transform: translateY(1px); }
-
-  .btn-lg { padding: 13px 28px; height: 48px; font-size: 1rem; }
-
-  .btn-primary { background: var(--fuchsia-500); color: var(--gray-0); }
-  .btn-primary:hover { background: var(--fuchsia-400); }
-
-  .btn-ghost {
-    background: transparent;
-    color: var(--text-primary);
-    border: 1px solid var(--border-default);
+  .chat-avatar img { height: 16px; }
+  .chat-answer { margin: 0; font-family: var(--font-sans); font-size: var(--text-body-sm); line-height: 1.6; color: var(--text-primary); }
+  .cite {
+    display: inline-flex; align-items: center; justify-content: center;
+    min-width: 15px; height: 15px; padding: 0 4px; border-radius: 4px;
+    font-size: 9px; font-weight: 700;
+    background: var(--klaya-yellow-100); color: var(--klaya-yellow-800);
+    vertical-align: super; margin: 0 1px;
   }
-  .btn-ghost:hover { background: rgba(255,255,255,0.05); border-color: var(--gray-400); }
-
-  /* ── Sections typography ───────────────────────────────────── */
-  .section h2 {
-    font-family: var(--font-display);
-    font-size: clamp(1.75rem, 3vw, 2.25rem);
-    font-weight: 700;
-    letter-spacing: -0.025em;
-    line-height: 1.2;
-    color: var(--text-primary);
-    margin: 0 0 28px;
-    text-wrap: balance;
+  .chat-traced {
+    display: inline-flex; align-items: center; gap: 6px;
+    margin-top: 16px; margin-left: 42px;
+    font-family: var(--font-sans); font-size: var(--text-caption); font-weight: 600;
+    color: var(--color-success);
   }
+  .hero-preview-sources { padding: 16px; background: var(--surface-page); }
+  .source-card {
+    background: var(--surface-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    padding: 12px;
+    margin-bottom: 10px;
+  }
+  .source-card-head { display: flex; align-items: center; gap: 8px; }
+  .source-badge {
+    width: 18px; height: 18px; border-radius: 50%;
+    background: var(--color-brand); color: var(--color-on-brand);
+    font-size: 10px; font-weight: 700;
+    display: inline-flex; align-items: center; justify-content: center;
+  }
+  .source-title { font-family: var(--font-sans); font-size: var(--text-caption); font-weight: 600; }
+  .source-quote { margin: 8px 0 0; font-family: var(--font-sans); font-size: 11px; line-height: 1.5; color: var(--text-secondary); }
 
-  .section p {
-    font-family: var(--font-body);
-    font-size: 1rem;
+  /* ── Section base ────────────────────────────────────── */
+  .section { max-width: var(--container-xl); margin: 0 auto; padding: 80px 28px; }
+  .section-head { text-align: center; margin-bottom: 48px; }
+  .section-head h2 { margin-top: 10px; }
+  .section-lead {
+    font-family: var(--font-sans);
+    font-size: var(--text-body-lg);
     color: var(--text-secondary);
-    line-height: 1.65;
-    margin: 0 0 20px;
-    text-wrap: pretty;
+    max-width: 640px;
+    margin: 16px auto 0;
+    line-height: 1.6;
   }
 
-  .pull-quote {
-    font-size: 1.125rem !important;
-    color: var(--text-primary) !important;
-    border-left: 3px solid var(--fuchsia-500);
-    padding-left: 24px;
-    margin: 32px 0 0 !important;
+  /* ── Il problema ─────────────────────────────────────── */
+  .problema-body {
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .problema-body p {
+    font-family: var(--font-sans);
+    font-size: var(--text-body-lg);
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin: 0 0 18px;
+  }
+  .problema-quote {
+    border-left: 4px solid var(--color-brand);
+    padding: 12px 0 12px 24px;
+    margin: 32px auto 0;
+    text-align: left;
+    font-family: var(--font-sans);
+    font-size: var(--text-body-lg);
+    font-weight: var(--weight-semibold);
+    color: var(--text-primary);
+    line-height: 1.5;
   }
 
-  /* ── Feature grid ──────────────────────────────────────────── */
-  .feature-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+  /* ── Feature cards ───────────────────────────────────── */
+  .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .card { border-radius: var(--radius-lg); padding: var(--space-8); }
+  .card--elevated { background: var(--surface-card); border: 1px solid var(--border-subtle); box-shadow: var(--shadow-sm); }
+  .feature-icon {
+    width: 44px; height: 44px; border-radius: var(--radius-md);
+    background: var(--klaya-yellow-100); color: var(--klaya-yellow-700);
+    display: inline-flex; align-items: center; justify-content: center;
+    margin-bottom: 16px;
+  }
+  .card h3 { margin-bottom: 6px; }
+  .feature-body { color: var(--text-secondary); line-height: 1.6; }
+
+  /* ── Screenshot placeholder ──────────────────────────── */
+  .screenshot-placeholder {
+    background: var(--surface-sunken);
+    border: 2px dashed var(--border-default);
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: var(--text-tertiary);
+    font-family: var(--font-sans);
+    font-size: var(--text-body-sm);
+    padding: 48px 32px;
+    margin-top: 28px;
+  }
+  .screenshot-placeholder--hero { aspect-ratio: 16 / 9; }
+  .screenshot-placeholder--card { min-height: 180px; margin-top: 20px; }
+
+  /* ── Sicurezza (dark section) ────────────────────────── */
+  .trace { background: var(--klaya-neutral-900); color: var(--text-on-inverse); padding: 80px 0; }
+  .trace-inner { max-width: var(--container-xl); margin: 0 auto; padding: 0 28px; }
+  .trace-head { text-align: center; margin-bottom: 52px; }
+  .trace-overline {
+    font-family: var(--font-sans); font-weight: var(--weight-semibold); font-size: 11px;
+    letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-brand);
+  }
+  .trace-title { margin-top: 10px; color: #fff; }
+  .trace-lead {
+    font-family: var(--font-sans);
+    font-size: var(--text-body-lg);
+    color: var(--klaya-neutral-400);
+    margin-top: 16px;
+    font-style: italic;
+  }
+  .trace-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .trace-step-head { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .trace-step-icon {
+    width: 46px; height: 46px; border-radius: var(--radius-md);
+    background: rgba(255,255,255,0.06); border: 1px solid var(--klaya-neutral-700);
+    color: var(--color-brand);
+    display: inline-flex; align-items: center; justify-content: center;
+  }
+  .trace-step-num { font-family: var(--font-sans); font-size: var(--text-caption); font-weight: 700; color: var(--klaya-neutral-500); }
+  .trace-step-title { color: #fff; margin-bottom: 6px; }
+  .trace-step-body { color: var(--klaya-neutral-400); line-height: 1.6; }
+  .trace-footnote {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--klaya-neutral-700);
+    font-family: var(--font-sans);
+    font-style: italic;
+    font-size: var(--text-body-sm);
+    color: var(--klaya-neutral-400);
+    text-align: center;
   }
 
-  .card {
-    background: var(--gray-900);
+  /* ── Build vs Buy table ──────────────────────────────── */
+  .compare-wrap { overflow-x: auto; }
+  .compare-table {
+    border-collapse: collapse;
+    width: 100%;
+    font-family: var(--font-sans);
+    font-size: 0.94rem;
+  }
+  .compare-table thead th {
+    text-align: left;
+    padding: 10px 16px;
+    font-size: var(--text-caption);
+    font-weight: var(--weight-semibold);
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--text-tertiary);
+    border-bottom: 2px solid var(--border-default);
+  }
+  .col-klaya-head {
+    background: var(--klaya-yellow-50);
+    color: var(--klaya-yellow-700) !important;
+  }
+  .compare-table tbody td {
+    padding: 13px 16px;
+    border-bottom: 1px solid var(--border-subtle);
+    vertical-align: middle;
+  }
+  .compare-row-label {
+    font-weight: var(--weight-medium);
+    color: var(--text-primary);
+    min-width: 200px;
+  }
+  .col-other { color: var(--text-tertiary); }
+  .col-klaya { background: var(--klaya-yellow-50); color: var(--text-primary); font-weight: var(--weight-medium); }
+  .cell-content { display: flex; align-items: center; gap: 8px; }
+  .compare-icon { flex-shrink: 0; }
+  .compare-icon--yes { color: #166534; }
+  .compare-icon--no { color: var(--klaya-neutral-400); }
+
+  /* ── Copilot note ────────────────────────────────────── */
+  .copilot-note {
+    margin-top: 40px;
+    padding: 24px 28px;
+    background: var(--surface-card);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-lg);
-    padding: 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    transition: border-color 150ms;
   }
-  .card:hover { border-color: var(--border-default); }
-
-  .icon-box {
-    width: 40px;
-    height: 40px;
-    border-radius: var(--radius-md);
-    background: rgba(176,48,208,0.1);
-    border: 1px solid rgba(176,48,208,0.2);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--fuchsia-400);
-    flex-shrink: 0;
+  .copilot-note h3 { margin-bottom: 12px; }
+  .copilot-list {
+    padding-left: 20px;
+    margin: 0 0 16px;
+    font-family: var(--font-sans);
+    font-size: var(--text-body-sm);
+    color: var(--text-secondary);
+    line-height: 1.7;
   }
-
-  .card h3 {
-    font-family: var(--font-display);
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--text-primary);
-    line-height: 1.3;
-    margin: 0 0 10px;
-    letter-spacing: -0.01em;
+  .copilot-list li { margin-bottom: 6px; }
+  .copilot-aside {
+    font-family: var(--font-sans);
+    font-size: var(--text-body-sm);
+    font-style: italic;
+    color: var(--text-secondary);
+    border-left: 3px solid var(--color-brand);
+    padding-left: 16px;
+    margin: 0;
+    line-height: 1.7;
   }
 
-  .card p {
-    font-family: var(--font-body);
-    font-size: 0.875rem;
+  /* ── Use cases ───────────────────────────────────────── */
+  .use-cases-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .use-case-card {
+    background: var(--surface-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-xl);
+    padding: 32px;
+  }
+  .use-case-icon {
+    width: 44px; height: 44px; border-radius: var(--radius-md);
+    background: var(--klaya-yellow-100); color: var(--klaya-yellow-700);
+    display: inline-flex; align-items: center; justify-content: center;
+    margin-bottom: 16px;
+  }
+  .use-case-card h3 { margin-bottom: 10px; }
+  .use-case-lead {
+    font-family: var(--font-sans);
+    font-size: var(--text-body-sm);
     color: var(--text-secondary);
     line-height: 1.65;
-    margin: 0;
-    text-wrap: pretty;
-  }
-
-  /* ── Badges ────────────────────────────────────────────────── */
-  .badge-success {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 3px 10px;
-    border-radius: var(--radius-pill);
-    background: rgba(26,140,82,0.15);
-    border: 1px solid rgba(26,140,82,0.3);
-    font-family: var(--font-body);
-    font-size: 0.75rem;
-    font-weight: 500;
-    color: #4dbb80;
-    height: 24px;
-  }
-
-  .badge-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: var(--green-500);
-    flex-shrink: 0;
-  }
-
-  /* ── Klaya section ─────────────────────────────────────────── */
-  .klaya-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: start;
-  }
-
-  .klaya-title {
-    font-family: var(--font-display);
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 700;
-    letter-spacing: -0.035em;
-    line-height: 1.08;
-    color: var(--text-primary);
     margin: 0 0 20px;
   }
-
-  .klaya-desc {
-    font-family: var(--font-body);
-    font-size: 1.125rem;
+  .use-case-points { display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px; }
+  .use-case-point {
+    font-family: var(--font-sans);
+    font-size: var(--text-body-sm);
     color: var(--text-secondary);
-    line-height: 1.65;
-    margin: 0 0 36px;
-    text-wrap: pretty;
+    line-height: 1.6;
+    padding-left: 12px;
+    border-left: 2px solid var(--border-default);
+  }
+  .use-case-point strong { color: var(--text-primary); }
+  .use-case-note {
+    font-family: var(--font-sans);
+    font-size: var(--text-caption);
+    font-style: italic;
+    color: var(--text-tertiary);
+    line-height: 1.6;
+    margin: 0 0 4px;
   }
 
-  .klaya-features {
-    list-style: none;
-    padding: 0;
-    margin: 8px 0 0;
+  /* ── Pricing ─────────────────────────────────────────── */
+  .pricing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 860px; margin: 0 auto; }
+  .pricing-card {
+    background: var(--surface-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-xl);
+    padding: 32px;
     display: flex;
     flex-direction: column;
-    gap: 28px;
+    position: relative;
   }
-
-  .klaya-features li {
-    display: flex;
-    align-items: flex-start;
-    gap: 16px;
+  .pricing-card--featured {
+    border-color: var(--klaya-yellow-400);
+    border-width: 2px;
+    background: var(--klaya-yellow-50);
   }
-
-  .kf-icon {
-    width: 28px;
-    height: 28px;
-    border-radius: var(--radius-sm);
-    background: rgba(176,48,208,0.12);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--fuchsia-400);
-    flex-shrink: 0;
-    margin-top: 2px;
+  .pricing-card-badge {
+    position: absolute;
+    top: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--color-brand);
+    color: var(--color-on-brand);
+    font-family: var(--font-sans);
+    font-size: var(--text-caption);
+    font-weight: var(--weight-semibold);
+    padding: 4px 14px;
+    border-radius: var(--radius-full);
+    white-space: nowrap;
   }
-
-  .klaya-features strong {
-    display: block;
-    font-family: var(--font-body);
-    font-size: 0.9375rem;
-    font-weight: 600;
-    color: var(--text-primary);
-    margin-bottom: 4px;
-  }
-
-  .klaya-features span {
-    font-family: var(--font-body);
-    font-size: 0.875rem;
+  .pricing-card-head { margin-bottom: 20px; }
+  .pricing-card-desc {
+    font-family: var(--font-sans);
+    font-size: var(--text-body-sm);
     color: var(--text-secondary);
-    line-height: 1.65;
+    margin: 6px 0 0;
+  }
+  .pricing-features {
+    list-style: none;
+    padding: 0; margin: 0 0 24px;
+    display: flex; flex-direction: column; gap: 12px;
+    flex: 1;
+  }
+  .pricing-features li {
+    display: flex; align-items: flex-start; gap: 10px;
+    font-family: var(--font-sans);
+    font-size: var(--text-body-sm);
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+  .pricing-check { color: #166534; flex-shrink: 0; margin-top: 2px; }
+  .pricing-check--brand { color: var(--klaya-yellow-700); }
+  .pricing-cta { width: 100%; justify-content: center; margin-top: auto; }
+  .pricing-note {
+    font-family: var(--font-sans);
+    font-size: var(--text-body-sm);
+    font-style: italic;
+    color: var(--text-tertiary);
+    text-align: center;
+    margin-top: 28px;
   }
 
-  .klaya-footnote {
-    margin-top: 56px;
-    padding-top: 32px;
-    border-top: 1px solid var(--border-subtle);
-    font-family: var(--font-body);
-    font-size: 0.875rem;
+  /* ── Early Adopter ───────────────────────────────────── */
+  .ea-section { background: var(--surface-sunken); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); padding: 80px 28px; }
+  .ea-inner { max-width: 760px; margin: 0 auto; }
+  .ea-title { margin-top: 10px; }
+  .ea-body {
+    font-family: var(--font-sans);
+    font-size: var(--text-body-lg);
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin: 20px 0 0;
+  }
+  .ea-quote {
+    border-left: 4px solid var(--color-brand);
+    padding: 12px 0 12px 24px;
+    margin: 28px 0;
+    font-family: var(--font-sans);
+    font-size: var(--text-body-lg);
+    font-weight: var(--weight-semibold);
+    color: var(--text-primary);
+    line-height: 1.5;
+  }
+  .ea-footnote {
+    font-family: var(--font-sans);
+    font-size: var(--text-body-sm);
     color: var(--text-tertiary);
     font-style: italic;
-    margin-bottom: 0 !important;
+    margin: 0 0 28px;
   }
 
-  /* ── Responsive ────────────────────────────────────────────── */
-  @media (max-width: 900px) {
-    .w { padding: 0 24px; }
-    .hero { padding: 80px 0 64px; }
-    .section { padding: 64px 0; }
+  /* ── Roadmap ─────────────────────────────────────────── */
+  .roadmap-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .roadmap-step {
+    padding: 28px;
+    background: var(--surface-card);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+  }
+  .roadmap-week {
+    font-family: var(--font-sans);
+    font-size: var(--text-caption);
+    font-weight: var(--weight-bold);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--klaya-yellow-700);
+    background: var(--klaya-yellow-50);
+    border: 1px solid var(--klaya-yellow-200);
+    border-radius: var(--radius-full);
+    padding: 4px 12px;
+    display: inline-block;
+    margin-bottom: 14px;
+  }
+  .roadmap-title { margin-bottom: 8px; }
+  .roadmap-body { color: var(--text-secondary); line-height: 1.65; }
+
+  /* ── CTA panel ───────────────────────────────────────── */
+  .cta-wrap { max-width: var(--container-xl); margin: 0 auto; padding: 76px 28px; }
+  .cta-panel {
+    background: var(--color-brand);
+    border-radius: var(--radius-2xl);
+    padding: 64px 48px;
+    text-align: center;
+  }
+  .cta-pictogram { height: 38px; opacity: 0.92; margin: 0 auto; display: block; }
+  .cta-kicker {
+    display: block;
+    font-family: var(--font-sans);
+    font-size: 11px;
+    font-weight: var(--weight-semibold);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--klaya-yellow-900);
+    margin: 16px 0 0;
+  }
+  .cta-sublead {
+    font-family: var(--font-sans);
+    font-size: var(--text-body);
+    color: var(--klaya-yellow-800);
+    margin: 12px auto 0;
+    max-width: 520px;
+    line-height: 1.6;
+  }
+  .cta-title {
+    font-family: var(--font-sans);
+    font-size: clamp(20px, 3.2vw, 34px);
+    font-weight: var(--weight-bold);
+    letter-spacing: var(--tracking-display);
+    color: var(--klaya-neutral-900);
+    margin: 22px auto 0;
+    max-width: 720px;
+    line-height: 1.22;
+  }
+  .cta-buttons { display: flex; gap: 12px; justify-content: center; margin-top: 32px; }
+
+  /* ── Responsive ──────────────────────────────────────── */
+  @media (max-width: 960px) {
+    .feature-grid { grid-template-columns: 1fr 1fr; }
+    .trace-grid { grid-template-columns: 1fr; gap: 36px; }
+    .use-cases-grid { grid-template-columns: 1fr; }
+    .pricing-grid { grid-template-columns: 1fr; max-width: 480px; }
+    .roadmap-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 700px) {
+    .hero-preview-grid { grid-template-columns: 1fr; }
+    .hero-preview-chat { border-right: none; border-bottom: 1px solid var(--border-subtle); }
     .feature-grid { grid-template-columns: 1fr; }
-    .klaya-grid { grid-template-columns: 1fr; gap: 48px; }
-  }
-
-  @media (max-width: 600px) {
-    .w { padding: 0 20px; }
+    .hero-cta { flex-direction: column; align-items: center; }
+    .cta-buttons { flex-direction: column; align-items: center; }
+    .cta-panel { padding: 40px 24px; }
+    .ea-section { padding: 60px 20px; }
   }
 </style>

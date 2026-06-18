@@ -1,0 +1,6 @@
+/* Klaya — global stylesheet entry point. Import-only; rules live in tokens/. */
+@import './tokens/fonts.css';
+@import './tokens/colors.css';
+@import './tokens/typography.css';
+@import './tokens/spacing.css';
+@import './tokens/base.css';
