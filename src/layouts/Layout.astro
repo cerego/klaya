@@ -5,9 +5,12 @@ import '../styles/global.css';
 interface Props {
   title: string;
   description?: string;
+  fullTitle?: string;
+  ogDescription?: string;
 }
 
-const { title, description = 'La conoscenza della vostra azienda, accessibile a chi serve.' } = Astro.props;
+const { title, description = 'La conoscenza della vostra azienda, accessibile a chi serve.', fullTitle, ogDescription } = Astro.props;
+const pageTitle = fullTitle ?? `${title} — Klaya`;
 const pathname = Astro.url.pathname;
 const isAbout = pathname === '/about' || pathname === '/about/';
 
@@ -46,8 +49,10 @@ const footerCols = [
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
     <meta name="robots" content="noindex, nofollow" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={ogDescription ?? description} />
     <link rel="icon" type="image/png" href="/logos/klaya-pictogram.png" />
-    <title>{title} — Klaya</title>
+    <title>{pageTitle}</title>
   </head>
   <body>
 
@@ -55,6 +60,7 @@ const footerCols = [
       <div class="nav-inner">
         <a href="/" class="nav-logo" aria-label="Klaya">
           <img src="/logos/klaya-logo.png" alt="Klaya" />
+          <span class="nav-tagline">AI you can trust. Knowledge you can trace.</span>
         </a>
         <nav class="nav-links">
           {navLinks.map((l) => (
@@ -77,7 +83,7 @@ const footerCols = [
       <div class="footer-top">
         <div class="footer-brand">
           <img src="/logos/klaya-logo.png" alt="Klaya" />
-          <p>La piattaforma che rende utilizzabile la conoscenza della vostra azienda.</p>
+          <p>AI you can trust. Knowledge you can trace.</p>
         </div>
         {footerCols.map((col) => (
           <div class="footer-col">
@@ -111,15 +117,23 @@ const footerCols = [
   .nav-inner {
     max-width: var(--container-xl);
     margin: 0 auto;
-    height: 66px;
+    height: 74px;
     padding: 0 28px;
     display: flex;
     align-items: center;
     gap: 28px;
   }
 
-  .nav-logo { display: flex; align-items: center; text-decoration: none; flex-shrink: 0; }
+  .nav-logo { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; line-height: 1; text-decoration: none; flex-shrink: 0; }
   .nav-logo img { height: 26px; width: auto; }
+  .nav-tagline {
+    font-family: var(--font-sans);
+    font-size: 10px;
+    font-weight: var(--weight-medium);
+    letter-spacing: 0.01em;
+    color: var(--text-tertiary);
+    white-space: nowrap;
+  }
 
   .nav-links { display: flex; gap: 4px; flex: 1; }
 
@@ -226,6 +240,7 @@ const footerCols = [
   }
 
   @media (max-width: 600px) {
+    .nav-tagline { display: none; }
     .footer-top { grid-template-columns: 1fr; }
     .footer-bottom { flex-direction: column; gap: 8px; }
   }
