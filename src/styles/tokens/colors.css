@@ -54,8 +54,8 @@
   --surface-active:      var(--klaya-neutral-200);
 
   --text-primary:        var(--klaya-neutral-900);
-  --text-secondary:      var(--klaya-neutral-500);
-  --text-tertiary:       var(--klaya-neutral-400);
+  --text-secondary:      var(--klaya-neutral-600);
+  --text-tertiary:       var(--klaya-neutral-500);
   --text-on-inverse:     var(--klaya-neutral-0);
   --text-on-inverse-dim: var(--klaya-neutral-400);
   --text-brand:          var(--klaya-yellow-700);

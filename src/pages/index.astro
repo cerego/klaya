@@ -14,6 +14,7 @@ const sources = [
 >
   <!-- ══ HERO ══════════════════════════════════════════════════ -->
   <section class="hero" id="hero">
+    <div class="hero-inner">
     <div class="hero-badge">
       <span class="badge badge--brand-solid">Early Adopter</span>
       <span>Posti limitati — accesso prioritario al co-design</span>
@@ -97,6 +98,7 @@ const sources = [
           }
         </div>
       </div>
+    </div>
     </div>
   </section>
 
@@ -207,10 +209,6 @@ const sources = [
         </div>
       </div>
     </div>
-    <div class="screenshot-placeholder screenshot-placeholder--hero">
-      <Icon name="camera" size={28} />
-      <span>Esempio: Klaya attivo in Microsoft Teams</span>
-    </div>
   </section>
 
   <!-- ══ SICUREZZA ═════════════════════════════════════════════ -->
@@ -276,10 +274,21 @@ const sources = [
           </p>
         </div>
       </div>
+      <div
+        class="screenshot-placeholder screenshot-placeholder--diagram"
+      >
+        <Icon name="git-branch" size={28} />
+        <span
+          >Diagramma: isolamento per controparte — il fornitore
+          raggiunge solo il proprio silo, HR e finanza restano
+          irraggiungibili</span
+        >
+      </div>
     </div>
   </section>
 
   <!-- ══ COSTI GOVERNATI (Finance gate) ════════════════════════ -->
+  <div class="costi-band">
   <section class="section" id="costi">
     <div class="section-head">
       <span class="klaya-overline">Governo dei costi</span>
@@ -327,7 +336,15 @@ const sources = [
         </p>
       </div>
     </div>
+    <div class="screenshot-placeholder screenshot-placeholder--hero">
+      <Icon name="activity" size={28} />
+      <span
+        >Dashboard: consumo AI per utente e reparto in tempo reale, con
+        soglie e previsione di esaurimento</span
+      >
+    </div>
   </section>
+  </div>
 
   <!-- ══ OLTRE I CONFINI (banda compatta) ══════════════════════ -->
   <section class="reach-band" id="oltre">
@@ -582,7 +599,10 @@ const sources = [
           class="screenshot-placeholder screenshot-placeholder--card"
         >
           <Icon name="camera" size={22} />
-          <span>Interfaccia assistente supporto tecnico</span>
+          <span
+            >La risposta citata che compare all'operatore prima ancora
+            di aprire il ticket</span
+          >
         </div>
       </div>
 
@@ -618,7 +638,10 @@ const sources = [
           class="screenshot-placeholder screenshot-placeholder--card"
         >
           <Icon name="camera" size={22} />
-          <span>Ricerca semantica su archivio documenti</span>
+          <span
+            >Risultato di ricerca con documento, pagina e paragrafo —
+            verifica immediata</span
+          >
         </div>
       </div>
     </div>
@@ -799,13 +822,12 @@ const sources = [
       />
       <span class="cta-kicker">La proposta</span>
       <p class="cta-sublead">
-        Non l'ennesima demo da quindici minuti, ma un tavolo tecnico
-        su un problema reale del vostro settore.
+        Dentro e fuori l'azienda — per i team interni e per la rete di
+        vendita, fornitori e clienti.
       </p>
       <h2 class="cta-title">
-        Qual è l'impatto sul vostro EBITDA se le vostre persone,
-        dentro e fuori l'azienda, smettessero di cercare informazioni
-        e iniziassero a trovarle?
+        Cosa succede al vostro EBITDA quando le vostre persone
+        smettono di cercare informazioni e iniziano a trovarle?
       </h2>
       <div class="cta-buttons">
         <a href="mailto:info@klaya.io" class="btn btn-inverse btn-lg">
@@ -816,6 +838,10 @@ const sources = [
           >Scopri i prezzi</a
         >
       </div>
+      <p class="cta-micronote">
+        Non l'ennesima demo da quindici minuti, ma un tavolo tecnico
+        su un problema reale del vostro settore.
+      </p>
     </div>
   </section>
 </Layout>
@@ -823,10 +849,15 @@ const sources = [
 <style>
   /* ── Hero ───────────────────────────────────────────────── */
   .hero {
+    background: var(--klaya-neutral-900);
+    color: var(--text-on-inverse);
+    padding: 76px 0 72px;
+    text-align: center;
+  }
+  .hero-inner {
     max-width: var(--container-xl);
     margin: 0 auto;
-    padding: 76px 28px 60px;
-    text-align: center;
+    padding: 0 28px;
   }
   .hero-badge {
     display: inline-flex;
@@ -834,16 +865,15 @@ const sources = [
     gap: 8px;
     padding: 6px 14px;
     border-radius: var(--radius-full);
-    background: var(--surface-card);
-    border: 1px solid var(--border-subtle);
-    box-shadow: var(--shadow-xs);
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--klaya-neutral-700);
     margin-bottom: 26px;
     font-family: var(--font-sans);
     font-size: var(--text-body-sm);
-    color: var(--text-secondary);
+    color: var(--klaya-neutral-300);
   }
   .hero-badge-arrow {
-    color: var(--text-tertiary);
+    color: var(--klaya-neutral-400);
   }
   .badge {
     display: inline-flex;
@@ -866,7 +896,7 @@ const sources = [
     letter-spacing: var(--tracking-display);
     margin: 0 auto;
     max-width: 900px;
-    color: var(--text-primary);
+    color: #fff;
   }
   .hero-title-accent {
     color: var(--color-brand);
@@ -874,10 +904,18 @@ const sources = [
   .hero-lead {
     font-family: var(--font-sans);
     font-size: var(--text-body-lg);
-    color: var(--text-secondary);
+    color: var(--klaya-neutral-300);
     max-width: 640px;
     margin: 22px auto 0;
     line-height: 1.55;
+  }
+  .hero .btn-secondary {
+    background: transparent;
+    color: #fff;
+    border-color: var(--klaya-neutral-600);
+  }
+  .hero .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.08);
   }
   .hero-cta {
     display: flex;
@@ -888,7 +926,7 @@ const sources = [
   .hero-footnote {
     font-family: var(--font-sans);
     font-size: var(--text-caption);
-    color: var(--text-tertiary);
+    color: var(--klaya-neutral-400);
     margin-top: 16px;
   }
 
@@ -1140,6 +1178,12 @@ const sources = [
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
   }
+  /* Full-bleed sunken band to re-anchor the eye between two light sections */
+  .costi-band {
+    background: var(--surface-sunken);
+    border-top: 1px solid var(--border-subtle);
+    border-bottom: 1px solid var(--border-subtle);
+  }
   .card {
     border-radius: var(--radius-lg);
     padding: var(--space-8);
@@ -1220,7 +1264,7 @@ const sources = [
   .reach-text p {
     margin: 0;
     font-family: var(--font-sans);
-    font-size: var(--text-caption);
+    font-size: var(--text-body-sm);
     color: var(--text-secondary);
     line-height: 1.5;
   }
@@ -1247,6 +1291,14 @@ const sources = [
   .screenshot-placeholder--card {
     min-height: 180px;
     margin-top: 20px;
+  }
+  /* Dark variant — reads as a diagram on the dark Sicurezza band */
+  .screenshot-placeholder--diagram {
+    background: rgba(255, 255, 255, 0.04);
+    border: 2px dashed var(--klaya-neutral-700);
+    color: var(--klaya-neutral-400);
+    aspect-ratio: 16 / 7;
+    margin-top: 48px;
   }
 
   /* ── Sicurezza (dark section) ────────────────────────── */
@@ -1424,6 +1476,7 @@ const sources = [
     color: var(--text-secondary);
     line-height: 1.65;
     margin: 0;
+    max-width: 62ch;
   }
 
   /* ── Use cases ───────────────────────────────────────── */
@@ -1674,7 +1727,7 @@ const sources = [
   .cta-sublead {
     font-family: var(--font-sans);
     font-size: var(--text-body);
-    color: var(--klaya-yellow-800);
+    color: var(--klaya-neutral-900);
     margin: 12px auto 0;
     max-width: 520px;
     line-height: 1.6;
@@ -1694,6 +1747,14 @@ const sources = [
     gap: 12px;
     justify-content: center;
     margin-top: 32px;
+  }
+  .cta-micronote {
+    font-family: var(--font-sans);
+    font-size: var(--text-body-sm);
+    color: var(--klaya-yellow-900); /* leggibile su fondo giallo brand */
+    margin: 16px auto 0;
+    max-width: 440px;
+    line-height: 1.5;
   }
 
   /* ── Responsive ──────────────────────────────────────── */
