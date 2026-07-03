@@ -25,7 +25,7 @@ const sources = [
     <h1 class="hero-title">La conoscenza della vostra azienda,<br /><span class="hero-title-accent">accessibile a chi serve, quando serve.</span></h1>
 
     <p class="hero-lead">
-      Klaya risponde dalle documentazioni aziendali e cita sempre la fonte esatta — per i team interni, la rete di vendita, i partner e i clienti.
+      Klaya risponde dalla documentazione aziendale e cita sempre la fonte — per i team interni e per la rete esterna: vendita, fornitori e clienti.
     </p>
 
     <div class="hero-cta">
@@ -89,27 +89,36 @@ const sources = [
     </div>
   </section>
 
-  <!-- ══ PRODOTTO ══════════════════════════════════════════════ -->
+  <!-- ══ PRODOTTO (layout asimmetrico) ═════════════════════════ -->
   <section class="section" id="prodotto">
-    <div class="section-head">
-      <span class="klaya-overline">Che cos'è Klaya</span>
-      <h2 class="klaya-h1">Un assistente che risponde — e cita sempre la fonte</h2>
-    </div>
-    <div class="feature-grid">
-      <div class="card card--elevated">
-        <span class="feature-icon"><Icon name="shield-check" size={22} /></span>
-        <h3 class="klaya-h4">Solo dai vostri documenti</h3>
-        <p class="klaya-body-sm feature-body">Vincolata ai documenti aziendali approvati. Se l'informazione non è a sistema, non la inventa — lo dice.</p>
+    <div class="prodotto-split">
+      <div class="prodotto-intro">
+        <span class="klaya-overline">Che cos'è Klaya</span>
+        <h2 class="klaya-h1">Un assistente che risponde e cita sempre la fonte</h2>
+        <p class="prodotto-intro-lead">Tre principi non negoziabili: risponde solo da ciò che è approvato, mostra sempre l'origine, vive dove già lavorate.</p>
       </div>
-      <div class="card card--elevated">
-        <span class="feature-icon"><Icon name="git-branch" size={22} /></span>
-        <h3 class="klaya-h4">Cita sempre la fonte</h3>
-        <p class="klaya-body-sm feature-body">Ogni risposta indica documento e pagina, verificabili con un click. Nessuna ambiguità sull'origine.</p>
-      </div>
-      <div class="card card--elevated">
-        <span class="feature-icon"><Icon name="building-2" size={22} /></span>
-        <h3 class="klaya-h4">Dove già lavorate</h3>
-        <p class="klaya-body-sm feature-body">Teams, Office 365, browser e mobile. Nessuna nuova app, nessuna formazione richiesta.</p>
+      <div class="feature-stack">
+        <div class="card card--elevated feature-row">
+          <span class="feature-icon"><Icon name="shield-check" size={22} /></span>
+          <div>
+            <h3 class="klaya-h4">Solo dai vostri documenti</h3>
+            <p class="klaya-body-sm feature-body">Vincolata ai documenti aziendali approvati. Se l'informazione non è a sistema, non la inventa — lo dice.</p>
+          </div>
+        </div>
+        <div class="card card--elevated feature-row">
+          <span class="feature-icon"><Icon name="git-branch" size={22} /></span>
+          <div>
+            <h3 class="klaya-h4">Cita sempre la fonte</h3>
+            <p class="klaya-body-sm feature-body">Ogni risposta indica documento e pagina, verificabili con un click. Nessuna ambiguità sull'origine.</p>
+          </div>
+        </div>
+        <div class="card card--elevated feature-row">
+          <span class="feature-icon"><Icon name="building-2" size={22} /></span>
+          <div>
+            <h3 class="klaya-h4">Dove già lavorate</h3>
+            <p class="klaya-body-sm feature-body">Teams, Office 365, browser e mobile. Nessuna nuova app, nessuna formazione richiesta.</p>
+          </div>
+        </div>
       </div>
     </div>
     <div class="screenshot-placeholder screenshot-placeholder--hero">
@@ -152,46 +161,48 @@ const sources = [
           <p class="klaya-body-sm trace-step-body">GDPR + AI Act, dati cifrati a riposo e in transito, infrastrutture cloud europee. Nessun dato usato per addestrare modelli condivisi.</p>
         </div>
       </div>
-      <p class="trace-footnote">La separazione è architetturale, non amministrativa.</p>
     </div>
   </section>
 
-  <!-- ══ OLTRE I CONFINI ═══════════════════════════════════════ -->
-  <section class="section" id="oltre">
-    <div class="section-head">
-      <span class="klaya-overline">La visione</span>
-      <h2 class="klaya-h1">Il valore oltre i confini aziendali</h2>
-      <p class="section-lead">Il vantaggio competitivo emerge quando la conoscenza fluisce — controllata — lungo tutta la catena del valore.</p>
-    </div>
-    <div class="feature-grid">
-      <div class="card card--elevated">
-        <span class="feature-icon"><Icon name="users" size={22} /></span>
-        <h3 class="klaya-h4">Rete di vendita</h3>
-        <p class="klaya-body-sm feature-body">Agenti e distributori interrogano cataloghi, listini e policy aggiornati in tempo reale. Meno chiamate alla sede, risposte più rapide ai clienti.</p>
+  <!-- ══ OLTRE I CONFINI (banda compatta) ══════════════════════ -->
+  <section class="reach-band" id="oltre">
+    <div class="reach-inner">
+      <div class="reach-intro">
+        <span class="klaya-overline">La visione</span>
+        <h2 class="reach-title">Il valore attraversa la catena, oltre i confini aziendali</h2>
       </div>
-      <div class="card card--elevated">
-        <span class="feature-icon"><Icon name="truck" size={22} /></span>
-        <h3 class="klaya-h4">Fornitori &amp; supply chain</h3>
-        <p class="klaya-body-sm feature-body">I partner consultano capitolati e procedure tecniche in autonomia. Meno errori da documentazione obsoleta, meno iterazioni.</p>
+      <div class="reach-row">
+        <div class="reach-item">
+          <span class="reach-icon"><Icon name="users" size={18} /></span>
+          <div class="reach-text">
+            <span class="reach-label">Rete di vendita</span>
+            <p>Cataloghi e listini aggiornati in tempo reale, meno chiamate alla sede.</p>
+          </div>
+        </div>
+        <div class="reach-item">
+          <span class="reach-icon"><Icon name="truck" size={18} /></span>
+          <div class="reach-text">
+            <span class="reach-label">Fornitori &amp; supply chain</span>
+            <p>Capitolati e procedure tecniche consultabili in autonomia.</p>
+          </div>
+        </div>
+        <div class="reach-item">
+          <span class="reach-icon"><Icon name="message-square" size={18} /></span>
+          <div class="reach-text">
+            <span class="reach-label">Clienti finali</span>
+            <p>Portale self-service: il ticket diventa l'eccezione, non la norma.</p>
+          </div>
+        </div>
       </div>
-      <div class="card card--elevated">
-        <span class="feature-icon"><Icon name="message-square" size={22} /></span>
-        <h3 class="klaya-h4">Clienti finali</h3>
-        <p class="klaya-body-sm feature-body">Portale self-service: il cliente trova la risposta dialogando con manuali e FAQ. Il ticket diventa l'eccezione, non la norma.</p>
-      </div>
-    </div>
-    <div class="screenshot-placeholder screenshot-placeholder--card">
-      <Icon name="camera" size={24} />
-      <span>Portale self-service clienti</span>
     </div>
   </section>
 
   <!-- ══ CONFRONTO ═════════════════════════════════════════════ -->
   <section class="section" id="confronto">
-    <div class="section-head">
+    <div class="section-head section-head--left">
       <span class="klaya-overline">Build vs Buy</span>
       <h2 class="klaya-h1">Perché non svilupparlo internamente</h2>
-      <p class="section-lead">La trappola del "fai da te" non è il prototipo iniziale: è il debito tecnico ricorrente che sottrae le risorse migliori al core business.</p>
+      <p class="section-lead">Il vero costo non è il prototipo iniziale, ma il debito tecnico ricorrente che sottrae le risorse migliori al core business.</p>
     </div>
     <div class="compare-wrap">
       <table class="compare-table">
@@ -232,19 +243,14 @@ const sources = [
       </table>
     </div>
 
-    <div class="copilot-note">
-      <h3 class="klaya-h4">E se avete già Microsoft Copilot?</h3>
-      <ul class="copilot-list">
-        <li>Copilot è progettato per l'interno: non offre un portale per partner e clienti esterni.</li>
-        <li>L'isolamento opera a livello di tenant, non di controparte: impossibile separare architetturalmente i dati per fornitore o rete di vendita.</li>
-      </ul>
-      <p class="copilot-aside">Se usate già Teams e SharePoint, Klaya si integra nativamente e fa ciò che Copilot non è progettato per fare: estendere la conoscenza alla rete esterna, con isolamento architetturale per ogni controparte.</p>
-    </div>
+    <p class="compare-note">
+      <strong>Avete già Microsoft Copilot?</strong> È progettato per l'interno: l'isolamento opera a livello di tenant, non di controparte, e non offre un portale per partner e clienti esterni. Klaya si integra nativamente con Teams e SharePoint e fa ciò per cui Copilot non è pensato — estendere la conoscenza alla rete esterna.
+    </p>
   </section>
 
   <!-- ══ CASI D'USO ════════════════════════════════════════════ -->
   <section class="section" id="casi-duso">
-    <div class="section-head">
+    <div class="section-head section-head--left">
       <span class="klaya-overline">Casi d'uso</span>
       <h2 class="klaya-h1">Due settori, un problema comune</h2>
     </div>
@@ -253,9 +259,9 @@ const sources = [
       <div class="use-case-card">
         <div class="use-case-icon"><Icon name="headphones" size={22} /></div>
         <h3 class="klaya-h3">Supporto tecnico</h3>
-        <p class="use-case-lead">Lo stesso operatore, le stesse domande, risposte diverse ogni volta. La conoscenza è nei thread chiusi e nei ticket risolti — inaccessibile nel momento in cui serve.</p>
+        <p class="use-case-lead">Lo stesso operatore, le stesse domande, risposte diverse ogni volta. La conoscenza è nei thread chiusi e nei ticket risolti, inaccessibile nel momento in cui serve.</p>
         <div class="use-case-points">
-          <div class="use-case-point"><strong>Risposta immediata.</strong> L'operatore ottiene la risposta corretta prima ancora di aprire il ticket — con la fonte esatta.</div>
+          <div class="use-case-point"><strong>Risposta immediata.</strong> L'operatore trova la risposta corretta prima ancora di aprire il ticket.</div>
           <div class="use-case-point"><strong>Standardizzazione progressiva.</strong> Ogni risposta citata diventa un mattone della knowledge base: il sistema migliora con ogni interazione.</div>
           <div class="use-case-point"><strong>Il ciclo virtuoso.</strong> Le anomalie senza risposta emergono in automatico — e diventano input per la documentazione tecnica.</div>
         </div>
@@ -271,9 +277,9 @@ const sources = [
         <h3 class="klaya-h3">Legal</h3>
         <p class="use-case-lead">Migliaia di documenti, decine di fascicoli, pressione costante sul tempo fatturabile. Il rischio non nasce dalla negligenza — nasce dal volume.</p>
         <div class="use-case-points">
-          <div class="use-case-point"><strong>Ricerca semantica e full-text.</strong> Trovate il precedente rilevante in secondi, non in ore — su tutti i fascicoli indicizzati.</div>
-          <div class="use-case-point"><strong>Segregazione per fascicolo e cliente.</strong> La separazione architetturale garantisce che nessun dato di un fascicolo sia raggiungibile da un altro.</div>
-          <div class="use-case-point"><strong>Citazione sempre all'originale.</strong> Ogni estratto riporta documento, pagina e paragrafo. La verifica è immediata.</div>
+          <div class="use-case-point"><strong>Ricerca semantica e full-text.</strong> Trovate il precedente rilevante in secondi, non in ore, su tutti i fascicoli indicizzati.</div>
+          <div class="use-case-point"><strong>Segregazione per fascicolo e cliente.</strong> Nessun dato di un fascicolo è raggiungibile da un altro.</div>
+          <div class="use-case-point"><strong>Citazione granulare.</strong> Ogni estratto riporta documento, pagina e paragrafo: verifica immediata.</div>
         </div>
         <p class="use-case-note">Adatto a: studi legali, uffici legal &amp; compliance, società di consulenza con archivi documentali complessi.</p>
         <div class="screenshot-placeholder screenshot-placeholder--card">
@@ -329,7 +335,7 @@ const sources = [
       </div>
 
     </div>
-    <p class="pricing-note">In entrambi i modelli il consumo AI è trasparente e governato da voi. Nessun costo aggiuntivo per utente.</p>
+    <p class="pricing-note">Nessun costo aggiuntivo per utente, in entrambi i modelli.</p>
   </section>
 
   <!-- ══ EARLY ADOPTER ═════════════════════════════════════════ -->
@@ -377,8 +383,8 @@ const sources = [
     <div class="cta-panel">
       <img src="/logos/klaya-pictogram-dark.png" alt="" class="cta-pictogram" />
       <span class="cta-kicker">La proposta</span>
-      <p class="cta-sublead">Non l'ennesima demo da quindici minuti. Un tavolo tecnico e strategico, partendo da un problema reale del vostro settore.</p>
-      <h2 class="cta-title">Qual è l'impatto sul vostro EBITDA se la vostra rete vendita, i fornitori e i dipendenti smettessero di cercare informazioni e iniziassero semplicemente a trovarle?</h2>
+      <p class="cta-sublead">Non l'ennesima demo da quindici minuti, ma un tavolo tecnico su un problema reale del vostro settore.</p>
+      <h2 class="cta-title">Qual è l'impatto sul vostro EBITDA se le vostre persone, dentro e fuori l'azienda, smettessero di cercare informazioni e iniziassero a trovarle?</h2>
       <div class="cta-buttons">
         <a href="mailto:info@klaya.io" class="btn btn-inverse btn-lg">
           Prenota una sessione
@@ -523,7 +529,7 @@ const sources = [
   .source-quote { margin: 8px 0 0; font-family: var(--font-sans); font-size: 11px; line-height: 1.5; color: var(--text-secondary); }
 
   /* ── Section base ────────────────────────────────────── */
-  .section { max-width: var(--container-xl); margin: 0 auto; padding: 80px 28px; }
+  .section { max-width: var(--container-xl); margin: 0 auto; padding: 60px 28px; }
   .section-head { text-align: center; margin-bottom: 48px; }
   .section-head h2 { margin-top: 10px; }
   .section-lead {
@@ -534,6 +540,29 @@ const sources = [
     margin: 16px auto 0;
     line-height: 1.6;
   }
+  .section-head--left { text-align: left; max-width: 760px; margin-left: 0; }
+  .section-head--left .section-lead { margin-left: 0; margin-right: 0; }
+
+  /* ── Prodotto (split asimmetrico) ────────────────────── */
+  .prodotto-split {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 56px;
+    align-items: start;
+  }
+  .prodotto-intro { position: sticky; top: 96px; }
+  .prodotto-intro h2 { margin-top: 10px; }
+  .prodotto-intro-lead {
+    font-family: var(--font-sans);
+    font-size: var(--text-body);
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 18px 0 0;
+  }
+  .feature-stack { display: flex; flex-direction: column; gap: 16px; }
+  .feature-row { display: flex; gap: 18px; align-items: flex-start; }
+  .feature-row .feature-icon { margin-bottom: 0; flex: none; }
+  .feature-row h3 { margin-bottom: 6px; }
 
   /* ── Il problema ─────────────────────────────────────── */
   .problema-body {
@@ -572,6 +601,54 @@ const sources = [
   }
   .card h3 { margin-bottom: 6px; }
   .feature-body { color: var(--text-secondary); line-height: 1.6; }
+
+  /* ── Reach band (La visione, compatta) ───────────────── */
+  .reach-band {
+    max-width: var(--container-xl);
+    margin: 0 auto;
+    padding: 44px 28px;
+  }
+  .reach-inner {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+  .reach-title {
+    font-family: var(--font-sans);
+    font-size: var(--text-h4);
+    font-weight: var(--weight-semibold);
+    line-height: 1.3;
+    color: var(--text-primary);
+    margin: 8px 0 0;
+  }
+  .reach-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .reach-item { display: flex; gap: 12px; align-items: flex-start; }
+  .reach-icon {
+    width: 34px; height: 34px; flex: none;
+    border-radius: var(--radius-md);
+    background: var(--klaya-yellow-100); color: var(--klaya-yellow-700);
+    display: inline-flex; align-items: center; justify-content: center;
+  }
+  .reach-label {
+    display: block;
+    font-family: var(--font-sans);
+    font-size: var(--text-body-sm);
+    font-weight: var(--weight-semibold);
+    color: var(--text-primary);
+    margin-bottom: 2px;
+  }
+  .reach-text p {
+    margin: 0;
+    font-family: var(--font-sans);
+    font-size: var(--text-caption);
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
 
   /* ── Screenshot placeholder ──────────────────────────── */
   .screenshot-placeholder {
@@ -669,34 +746,18 @@ const sources = [
   .compare-icon--yes { color: #166534; }
   .compare-icon--no { color: var(--klaya-neutral-400); }
 
-  /* ── Copilot note ────────────────────────────────────── */
-  .copilot-note {
-    margin-top: 40px;
-    padding: 24px 28px;
-    background: var(--surface-card);
-    border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-lg);
-  }
-  .copilot-note h3 { margin-bottom: 12px; }
-  .copilot-list {
-    padding-left: 20px;
-    margin: 0 0 16px;
-    font-family: var(--font-sans);
-    font-size: var(--text-body-sm);
-    color: var(--text-secondary);
-    line-height: 1.7;
-  }
-  .copilot-list li { margin-bottom: 6px; }
-  .copilot-aside {
-    font-family: var(--font-sans);
-    font-size: var(--text-body-sm);
-    font-style: italic;
-    color: var(--text-secondary);
-    border-left: 3px solid var(--color-brand);
+  /* ── Copilot note (footnote a piè di tabella) ────────── */
+  .compare-note {
+    margin: 18px 0 0;
     padding-left: 16px;
-    margin: 0;
-    line-height: 1.7;
+    border-left: 3px solid var(--border-default);
+    font-family: var(--font-sans);
+    font-size: var(--text-body-sm);
+    color: var(--text-tertiary);
+    line-height: 1.65;
+    max-width: 760px;
   }
+  .compare-note strong { color: var(--text-secondary); }
 
   /* ── Use cases ───────────────────────────────────────── */
   .use-cases-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
@@ -901,6 +962,10 @@ const sources = [
     .use-cases-grid { grid-template-columns: 1fr; }
     .pricing-grid { grid-template-columns: 1fr; max-width: 480px; }
     .roadmap-grid { grid-template-columns: 1fr; }
+    .reach-inner { grid-template-columns: 1fr; gap: 24px; }
+    .reach-row { gap: 20px; }
+    .prodotto-split { grid-template-columns: 1fr; gap: 32px; }
+    .prodotto-intro { position: static; }
   }
 
   @media (max-width: 700px) {
@@ -911,5 +976,6 @@ const sources = [
     .cta-buttons { flex-direction: column; align-items: center; }
     .cta-panel { padding: 40px 24px; }
     .ea-section { padding: 60px 20px; }
+    .reach-row { grid-template-columns: 1fr; }
   }
 </style>
